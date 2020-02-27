@@ -133,7 +133,7 @@ $(document).ready(function() {
     Sin of x is right
 
     https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html#Spatialization-panning-algorithm
-    http://www.w3schools.com/jsref/jsref_obj_math.asp
+    https://www.w3schools.com/jsref/jsref_obj_math.asp
     ======================== */
 
     // input change is like saying <input oninput="showVal(this.value)" etc.
