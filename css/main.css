@@ -440,6 +440,10 @@ button:focus {
   object-fit: cover;
 }
 
+.figure__media--full-screen {
+  height:100vh;
+}
+
 .figure__caption__link {
   position: absolute;
   top: 50%;
