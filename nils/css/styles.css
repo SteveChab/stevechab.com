@@ -110,10 +110,11 @@ section {
 }
 
 #tracks {
-    font-size: 1.5em;
+    font-size: 1.35em;
     list-style-position: inside;
     padding: 0;
-    margin: 1em 0;
+    margin: 0 0 1em;
+    line-height: 1.35em;
 }
 
 #tracks li {
