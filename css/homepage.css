@@ -6,30 +6,30 @@ Homepage
   background-color: white;
   transition: background-color ease calc(var(--animation-speed-slow));
   padding: 0;
+  overflow: hidden;
 }
 
 .js-animate {
   --beats-per-minute: 60; /* default BPM */
   --beat-half: calc(60s / (var(--beats-per-minute) / 2)); /* every 2 beats */
   --beat-whole: calc(60s / (var(--beats-per-minute) / 4)); /* every 4 beats */
-  background-color: var(--bg-color);
 }
 
 .song1 {
   --beats-per-minute: 84.6;
-  --bg-color: var(--color1);
+  background-color: var(--color1);
   --transform: scale(5) rotate(135deg) translate(-20%, 1%);
 }
 
 .song2 {
   --beats-per-minute: 97;
-  --bg-color: var(--color2);
+  background-color: var(--color2);
   --transform: scale(10) rotate(45deg) translate(33%, 1%);
 }
 
 .song3 {
   --beats-per-minute: 80;
-  --bg-color: var(--color3);
+  background-color: var(--color3);
   --transform: scale(7) rotate(90deg) translate(23%, 2%);
 }
 
@@ -161,8 +161,8 @@ Homepage
 }
 
 @keyframes blink {
-  0%, 100% { background-color: #999; }
-  5%, 95% { background-color: var(--bg-color); }
+  0%, 100% { filter: invert(1); }
+  5%, 95% { filter: invert(0); }
 }
 
 @keyframes draw {
@@ -226,10 +226,6 @@ Homepage
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   position: relative;
-}
-
-.main {
-  overflow: hidden;
 }
 
 .js-animate .steve-chab-abstract,
