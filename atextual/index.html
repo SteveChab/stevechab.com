@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Atextual: A Snarky Dictionary of Fake Band Names - Steve Chab</title>
+  <meta name="description" content="200+ poetic terms and definitions, randomized … atextual, ubiquitous computing.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:image" content="">
+
+  <meta name="author" content="Steve Chab">
+  <meta name="msapplication-TileImage" content="../tile.png">
+  <meta name="msapplication-TileColor" content="#7fff01">
+  <meta name="theme-color" content="#7fff01">
+  <link rel="icon" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../icon.png">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+  <header class="header">
+    <a class="header__link-home" href="/">
+      <span class="sr-only">Steve Chab Homepage</span>
+      <svg aria-hidden="true" class="header__link-home__wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 337.3 49.9">
+        <g class="steve-chab">
+          <g class="steve steve1" data-name="steve">
+            <polyline class="no-fill s1 s" points="26.5 7.1 9.5 24.1 43.5 24.1 26.5 41.1"/>
+            <g class="t1 t">
+              <line class="no-fill" x1="60.6" y1="7.1" x2="60.6" y2="41.1"/>
+              <line class="no-fill" x1="77.6" y1="24.1" x2="43.5" y2="24.1"/>
+            </g>
+            <polyline class="no-fill e1-1 e" points="111.6 24.1 77.6 24.1 94.6 41.1"/>
+            <polyline class="no-fill v1 v" points="111.6 24.1 128.6 41.1 145.6 24.1"/>
+            <polyline class="no-fill e1-2 e" points="179.6 24.1 145.6 24.1 162.6 41.1"/>
+          </g>
+          <g class="chab chab1" data-name="chab">
+            <polyline class="no-fill c1 c" points="230.2 41.5 196.1 41.5 230.2 7.5 230.2 24.5"/>
+            <g class="h1 h">
+              <line class="no-fill" x1="264.2" y1="7.5" x2="230.2" y2="41.5"/>
+              <line class="no-fill" x1="264.2" y1="41.5" x2="247.2" y2="24.5"/>
+            </g>
+            <polyline class="no-fill a1 a" points="298.2 41.5 281.2 24.5 264.2 41.5"/>
+            <polyline class="no-fill b1 b" points="332.2 7.5 298.2 41.5 332.2 41.5 315.2 24.5"/>
+          </g>
+        </g>
+      </svg>
+    </a>
+    <a class="header__link-menu icon" href="/menu/">
+      <span class="sr-only">Menu</span>
+    </a>
+  </header>
+  <main class="main main--atextual">
+    <dl class="definition-list">
+      <dt class="definition-list__term">ubiquitous computing</dt>
+      <dd class="definition-list__definition">this</dd>
+    </dl>
+    <div class="decorative-terms" aria-hidden="true">
+      <span class="decorative-terms__term">ubiquitous computing</span>
+    </div>
+
+    <button class="icon action-button action-button">
+      <span class="sr-only">Get new term and definition</span>
+    </button>
+  </main>
+  <script>document.querySelector(".no-js").classList.remove("no-js");</script>
+  <script>
+    var sheet = "https://script.googleusercontent.com/macros/echo?user_content_key=UHqjfvraFuQ5ISYLPh2QCyP6FHUW4cj-9DFM3_aJqX9r91BKiz5vE4RjaniGLExVf3hdGqYgSboPWPQUTlu4vlae3Dv1EmMpm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnNzlJ22YVv6uoZN9PssUDmqCBauBb_CWFaiPnrDIBwH9IIL9zL982gzyMw4zSLbCZUsKiRG9RlvhNMOW5EudYCE1E1z0lhqr9dz9Jw9Md8uu&lib=Mryg7BUxkOGMwU21_Zg-l6GqzSmbeoLAb";
+    var atextual = "STEVEEEE!!!!";
+
+    function generateDefinition() {
+      var totalRows = atextual.length;
+      var randomEntry = Math.floor((Math.random() * totalRows) + 0);
+      var term = atextual[randomEntry].term;
+      var definition = atextual[randomEntry].definition;
+
+      if (!term || !definition) {
+        generateDefinition();
+      } else {
+        document.querySelector(".definition-list__term").innerHTML = term;
+        document.querySelector(".definition-list__definition").innerHTML = definition;
+        document.querySelector(".decorative-terms__term").innerHTML = term;
+      }
+    }
+
+    fetch(sheet, { 
+      method: 'GET'
+    })
+    .then(function(response) { return response.json(); })
+    .then(function(json) {
+      atextual = json;
+      generateDefinition();
+    });
+
+    document.querySelector(".action-button").onclick = function() {
+      generateDefinition();
+    };
+  </script>
+</body>
+</html>

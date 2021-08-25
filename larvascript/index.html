@@ -1,0 +1,252 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>LarvaScript - Steve Chab</title>
+  <meta name="description" content="Trippy, glitchy, nauseating, computer art animations">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:image" content="">
+
+  <meta name="author" content="Steve Chab">
+  <meta name="msapplication-TileImage" content="../tile.png">
+  <meta name="msapplication-TileColor" content="#7fff01">
+  <meta name="theme-color" content="#7fff01">
+  <link rel="icon" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../icon.png">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+
+  <style>
+    html, .page-container {
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+
+    .main {
+        background-color: darkslategrey;
+        color: white;
+        text-shadow:0 0 1rem #000;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        position: absolute;
+        width: 100vw;
+    }
+
+    .art-container {
+        height: 100vh;
+        width: 100vw;
+        transform: rotate(45deg) scale(2);
+        position: absolute;
+        z-index: 0;
+    }
+
+    /* JS setInterval is better on CPU than CSS keyframes (see "setInterval" in JS below) */
+    /* @keyframes move-right {
+        0% {background-position-x: 0}
+        50% {background-position-x: -150vw}
+    } */
+
+    .art {
+        background: url(images/bg-moving-black.gif);
+        background-repeat: repeat;
+        background-position-x: 0;
+        background-position-y: center;
+        display: block;
+        position: absolute;
+        left: -50vw;
+        top: -50vh;
+        height: 100vh;
+        width: 100vw;
+        /* animation-name: move-right;
+        animation-duration: 45s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite; */
+    }
+
+    .art--2 {
+        transform: rotate(90deg);
+        transform-origin: bottom right;
+    }
+
+    .art--3 {
+        transform: rotate(180deg);
+        transform-origin: bottom right;
+    }
+
+    .art--4 {
+        transform: rotate(270deg);
+        transform-origin: bottom right;
+    }
+
+    .icon-container {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        line-height: 0;
+        z-index: 5;
+    }
+
+    .action-button {
+      z-index: 100;
+    }
+
+    .control-container {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        line-height: 0;
+        z-index: 5;
+    }
+    .no-js .control-container {display: none}
+
+    .control {
+        background:white 0 0 scroll repeat;
+        text-indent: -9999px;
+        line-height: 0;
+    }
+
+    @media (max-width: 767px) {
+      .control {
+        display: block;
+        margin: .5em 0 0 0;
+      }
+    }
+
+    [aria-pressed="true"] {
+      transform: rotate(45deg);
+    }
+
+    .overlay {
+        background:url(images/bg.gif) center center scroll repeat transparent;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        mix-blend-mode:overlay;
+    }
+  </style>
+</head>
+
+<body class="page-container no-js">
+  <header class="header">
+    <a class="header__link-home" href="/">
+      <span class="sr-only">Steve Chab Homepage</span>
+      <svg aria-hidden="true" class="header__link-home__wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 337.3 49.9">
+        <g class="steve-chab">
+          <g class="steve steve1" data-name="steve">
+            <polyline class="no-fill s1 s" points="26.5 7.1 9.5 24.1 43.5 24.1 26.5 41.1"/>
+            <g class="t1 t">
+              <line class="no-fill" x1="60.6" y1="7.1" x2="60.6" y2="41.1"/>
+              <line class="no-fill" x1="77.6" y1="24.1" x2="43.5" y2="24.1"/>
+            </g>
+            <polyline class="no-fill e1-1 e" points="111.6 24.1 77.6 24.1 94.6 41.1"/>
+            <polyline class="no-fill v1 v" points="111.6 24.1 128.6 41.1 145.6 24.1"/>
+            <polyline class="no-fill e1-2 e" points="179.6 24.1 145.6 24.1 162.6 41.1"/>
+          </g>
+          <g class="chab chab1" data-name="chab">
+            <polyline class="no-fill c1 c" points="230.2 41.5 196.1 41.5 230.2 7.5 230.2 24.5"/>
+            <g class="h1 h">
+              <line class="no-fill" x1="264.2" y1="7.5" x2="230.2" y2="41.5"/>
+              <line class="no-fill" x1="264.2" y1="41.5" x2="247.2" y2="24.5"/>
+            </g>
+            <polyline class="no-fill a1 a" points="298.2 41.5 281.2 24.5 264.2 41.5"/>
+            <polyline class="no-fill b1 b" points="332.2 7.5 298.2 41.5 332.2 41.5 315.2 24.5"/>
+          </g>
+        </g>
+      </svg>
+    </a>
+    <a class="header__link-menu icon" href="/menu/">
+      <span class="sr-only">Menu</span>
+    </a>
+  </header>
+    <main class="art-container" aria-hidden="true">
+        <h1 class="sr-only">Steve Chab's LarvaScript: trippy, glitchy, nauseating, computer art animations</h1>
+        <div class="art art--1"></div>
+        <div class="art art--2"></div>
+        <div class="art art--3"></div>
+        <div class="art art--4"></div>
+    </main>
+    <button class="icon action-button" aria-pressed="false">
+      <span class="sr-only">Induce Seizures</span>
+    </button>
+    <div class="control-container">
+        <button class="icon control" aria-pressed="true" data-art="images/bg.gif">Default View</button>
+        <button class="icon control" aria-pressed="false" data-art="images/bg-moving-black.gif">Crawling Diagonals</button>
+        <button class="icon control" aria-pressed="false" data-art="images/bg-noise.gif">Noise</button>
+        <button class="icon control" aria-pressed="false" data-art="images/bg-t.gif">RGB Strobe</button>
+        <button class="icon control" aria-pressed="false" data-art="images/bg-strobe.gif">Black and White Strobe</button>
+    </div>
+    <div class="overlay"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+
+        $(".no-js").removeClass("no-js");
+
+        // load effects navigation 
+        $('.control').each(function(){
+            var setArt = 'background-image:url(' + $(this).attr('data-art') + ')';
+            $(this).attr('style', setArt);
+        }).click(function(){
+            $('.control').attr('aria-pressed','false');
+            $(this).attr('aria-pressed','true');
+            var setArt = 'background-image:url(' + $(this).attr('data-art') + ')';
+            $('.overlay').attr('style', setArt);
+        });
+
+        var degrees = 45.0;
+        var intervalSpin;
+        var i = 0;
+
+        $('.action-button').click(function(){
+          $('body').toggleClass('animate');
+            
+            function startRotate(){
+              $('.art-container').css({ transform: 'rotate(' + degrees++ + 'deg) scale(2)' });
+              $('.art').css({ backgroundPosition: i++ });
+            }
+
+            if($('.animate').length) {
+              intervalSpin = setInterval(startRotate, 40);
+              $('.action-button').attr('aria-pressed','true');
+            } else {
+              clearInterval(intervalSpin);
+              $('.action-button').attr('aria-pressed','false');
+            }
+        });
+    });
+
+    var getJSON = $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=CBa8KMnHoScQ_jTwRegbvR4K4hq8Coy4I5O9o3n5jrPVPLYkC9VXXkHywaXIr3W0IfUzSXtzPyaDvkCyE4N_AjE6eyo4RneMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnAXcxya3zxAyVE6wUH9gJG8HDv8QX-1cYK9GC_rZ4sYRDVtqcmQC9OGCTwxE3DlvDhpUTFujkBSlc40cOE7rkMr-0zvEDtu0Iw&lib=MEnjPjs7QRK1vYCqCunZeHN8xCLqJE_8p"),
+        sheetJSON;
+
+    function processJSON(){
+        var subhead = sheetJSON[0].title,
+            artwork1 = 'background-image:url(' + sheetJSON[0].art1 + ')',
+            artwork2 = 'background-image:url(' + sheetJSON[0].art2 + ')',
+            artwork3 = 'background-image:url(' + sheetJSON[0].art3 + ')',
+            artwork4 = 'background-image:url(' + sheetJSON[0].art4 + ')';
+        
+        console.log(artwork1);
+        
+        $('.art--1').attr('style', artwork1);
+        $('.art--2').attr('style', artwork2);
+        $('.art--3').attr('style', artwork3);
+        $('.art--4').attr('style', artwork4);
+    }
+
+    getJSON.done(function () {
+        sheetJSON = getJSON.responseJSON;
+        processJSON();
+    });
+    </script>
+</body>

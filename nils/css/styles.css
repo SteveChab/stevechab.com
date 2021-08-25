@@ -1,0 +1,151 @@
+html, body {
+    height: 100%;
+}
+
+img {
+    max-width:100%;
+    vertical-align: middle;
+    height: auto;
+}
+
+    
+b,
+i {
+    font-weight: normal;
+    font-style: normal;
+    transition:opacity 0.1s ease;
+}
+
+#audio,
+audio,
+label {
+    position: absolute;
+    height: 0;
+    width: 0;
+    left: -9999px;
+}
+
+.no-js #audio {
+  position: absolute;
+  height: auto;
+  width: calc(100% - 2em);
+  left: 0;
+  bottom: 1em;
+  z-index: 9999;
+  margin: 1em;
+}
+
+.no-js audio {
+  position: relative;
+  height: 3em;
+  width: 100%;
+  left: 0;
+}
+
+#art {
+    position: relative;
+    background-color: #000;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: opacity .2s ease;
+}
+
+#art img {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 45%;
+    transform: translateY(-50%) rotate(0deg);
+}
+
+img[alt='sun'] {opacity: .5;}
+
+section {
+  background: linear-gradient(transparent, black);
+  margin: 0 auto;
+  position: absolute;
+  padding: 1em;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+}
+
+#controls {
+    font-size: 2em;
+    text-align: center;
+    width: auto;
+    margin: 0 auto;
+    display: inline-block;
+    padding: .35em;
+}
+
+.no-js #controls,
+.no-js #tracks,
+.no-js #slider {
+  display: none;
+}
+
+#controls a {
+  background-color: transparent;
+  border: 0;
+  display: inline-block;
+  position: relative;
+  padding: 20px;
+  text-decoration: none;
+}
+
+#controls a:focus,
+#controls a:hover {
+  background-color: black;
+}
+
+#controls b {
+    font-size: .65em;
+    position: relative;
+    left: -.2em;
+    top: -.3em;
+}
+
+#tracks {
+    font-size: 1.5em;
+    list-style-position: inside;
+    padding: 0;
+    margin: 1em 0;
+}
+
+#tracks li {
+    font-family: 'Times New Roman', 'Georgia', serif;
+    font-size: 1.15em;
+    padding: 0;
+    display: inline;
+}
+
+#tracks a {
+  background-color: transparent;
+}
+
+#tracks a:hover,
+#tracks a:focus {
+  background-color: black;
+}
+
+#tracks a:not(.active):not(:hover):not(:focus) {opacity: .5}
+
+#slider {
+    background-color: #333;
+    cursor: col-resize;
+    height: 40px;
+    display: block;
+    width: 100%;
+    max-width: calc(600px - 1em);
+    margin: 0 auto 1em;
+}
+
+article {
+    margin: 0 auto;
+    max-width: calc(600px - 2em);
+    padding: 1em;
+}

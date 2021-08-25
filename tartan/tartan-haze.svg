@@ -1,0 +1,253 @@
+<svg class="tartan" xmlns="http://www.w3.org/2000/svg" width="2475" height="2475" viewBox="0 0 2475 2475">
+  <defs>
+    <style>
+      .background { fill: #182c4b; }
+
+      line {
+        fill: none;
+        stroke-width: 10px;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+      }
+
+      .teal { stroke: #008f91; }
+      .red { stroke: #ef3a47; }
+      .gold { stroke: #fdb515; }
+      .blue { stroke: #043673; }
+      .green { stroke: #009647; }
+    
+      .horizontal line { animation-name: vertical; }
+      
+      .horizontal .teal { animation-duration: 10s; }
+      .horizontal .red { animation-duration: 20s; }
+      .horizontal .gold { animation-duration: 8s; }
+      .horizontal .blue { animation-duration: 15s; }
+      .horizontal .green { animation-duration: 17s; }
+      
+      .vertical line { animation-name: horizontal; }
+      
+      .vertical .teal { animation-duration: 10s; }
+      .vertical .red { animation-duration: 20s; }
+      .vertical .gold { animation-duration: 8s; }
+      .vertical .blue { animation-duration: 15s; }
+      .vertical .green { animation-duration: 17s; }
+      
+      @keyframes horizontal {
+        0% { transform: translateX(20%); }
+        45% { transform: translateX(0%); }
+        55% { transform: translateX(0%); }
+        100% { transform: translateX(-20%); }
+      }
+
+      @keyframes vertical {
+        0% { transform: translateY(20%); }
+        45% { transform: translateY(0%); }
+        55% { transform: translateY(0%); }
+        100% { transform: translateY(-20%); }
+      }
+    </style>
+  </defs>
+  <title>tartan-straight-lines</title>
+  <rect class="background" width="2475" height="2475"/>
+  <g class="horizontal">
+    <line class="teal" y1="2450" x2="2475" y2="2450"/>
+    <line class="teal" y1="2425" x2="2475" y2="2425"/>
+    <line class="teal" y1="2400" x2="2475" y2="2400"/>
+    <line class="teal" y1="2375" x2="2475" y2="2375"/>
+    <line class="teal" y1="2350" x2="2475" y2="2350"/>
+    <line class="teal" y1="2325" x2="2475" y2="2325"/>
+    <line class="teal" y1="2300" x2="2475" y2="2300"/>
+    <line class="teal" y1="2275" x2="2475" y2="2275"/>
+    <line class="teal" y1="2250" x2="2475" y2="2250"/>
+    <line class="red" y1="2225" x2="2475" y2="2225"/>
+    <line class="red" y1="2200" x2="2475" y2="2200"/>
+    <line class="red" y1="2175" x2="2475" y2="2175"/>
+    <line class="red" y1="2150" x2="2475" y2="2150"/>
+    <line class="red" y1="2125" x2="2475" y2="2125"/>
+    <line class="teal" y1="2100" x2="2475" y2="2100"/>
+    <line class="teal" y1="2075" x2="2475" y2="2075"/>
+    <line class="red" y1="2050" x2="2475" y2="2050"/>
+    <line class="teal" y1="2025" x2="2475" y2="2025"/>
+    <line class="gold" y1="2000" x2="2475" y2="2000"/>
+    <line class="gold" y1="1975" x2="2475" y2="1975"/>
+    <line class="teal" y1="1950" x2="2475" y2="1950"/>
+    <line class="red" y1="1925" x2="2475" y2="1925"/>
+    <line class="teal" y1="1900" x2="2475" y2="1900"/>
+    <line class="teal" y1="1875" x2="2475" y2="1875"/>
+    <line class="red" y1="1850" x2="2475" y2="1850"/>
+    <line class="red" y1="1825" x2="2475" y2="1825"/>
+    <line class="red" y1="1800" x2="2475" y2="1800"/>
+    <line class="red" y1="1775" x2="2475" y2="1775"/>
+    <line class="red" y1="1750" x2="2475" y2="1750"/>
+    <line class="teal" y1="1725" x2="2475" y2="1725"/>
+    <line class="teal" y1="1700" x2="2475" y2="1700"/>
+    <line class="teal" y1="1675" x2="2475" y2="1675"/>
+    <line class="teal" y1="1650" x2="2475" y2="1650"/>
+    <line class="teal" y1="1625" x2="2475" y2="1625"/>
+    <line class="teal" y1="1600" x2="2475" y2="1600"/>
+    <line class="teal" y1="1575" x2="2475" y2="1575"/>
+    <line class="teal" y1="1550" x2="2475" y2="1550"/>
+    <line class="teal" y1="1525" x2="2475" y2="1525"/>
+    <line class="blue" y1="1500" x2="2475" y2="1500"/>
+    <line class="blue" y1="1475" x2="2475" y2="1475"/>
+    <line class="blue" y1="1450" x2="2475" y2="1450"/>
+    <line class="blue" y1="1425" x2="2475" y2="1425"/>
+    <line class="blue" y1="1400" x2="2475" y2="1400"/>
+    <line class="red" y1="1375" x2="2475" y2="1375"/>
+    <line class="blue" y1="1350" x2="2475" y2="1350"/>
+    <line class="blue" y1="1325" x2="2475" y2="1325"/>
+    <line class="blue" y1="1300" x2="2475" y2="1300"/>
+    <line class="blue" y1="1275" x2="2475" y2="1275"/>
+    <line class="blue" y1="1250" x2="2475" y2="1250"/>
+    <line class="blue" y1="1225" x2="2475" y2="1225"/>
+    <line class="blue" y1="1200" x2="2475" y2="1200"/>
+    <line class="blue" y1="1175" x2="2475" y2="1175"/>
+    <line class="blue" y1="1150" x2="2475" y2="1150"/>
+    <line class="blue" y1="1125" x2="2475" y2="1125"/>
+    <line class="blue" y1="1100" x2="2475" y2="1100"/>
+    <line class="blue" y1="1075" x2="2475" y2="1075"/>
+    <line class="blue" y1="1050" x2="2475" y2="1050"/>
+    <line class="blue" y1="1025" x2="2475" y2="1025"/>
+    <line class="blue" y1="25" x2="2475" y2="25"/>
+    <line class="blue" y1="50" x2="2475" y2="50"/>
+    <line class="blue" y1="75" x2="2475" y2="75"/>
+    <line class="blue" y1="100" x2="2475" y2="100"/>
+    <line class="blue" y1="125" x2="2475" y2="125"/>
+    <line class="red" y1="150" x2="2475" y2="150"/>
+    <line class="blue" y1="175" x2="2475" y2="175"/>
+    <line class="blue" y1="200" x2="2475" y2="200"/>
+    <line class="blue" y1="225" x2="2475" y2="225"/>
+    <line class="blue" y1="250" x2="2475" y2="250"/>
+    <line class="blue" y1="275" x2="2475" y2="275"/>
+    <line class="blue" y1="300" x2="2475" y2="300"/>
+    <line class="blue" y1="325" x2="2475" y2="325"/>
+    <line class="blue" y1="350" x2="2475" y2="350"/>
+    <line class="blue" y1="375" x2="2475" y2="375"/>
+    <line class="blue" y1="400" x2="2475" y2="400"/>
+    <line class="blue" y1="425" x2="2475" y2="425"/>
+    <line class="blue" y1="450" x2="2475" y2="450"/>
+    <line class="blue" y1="475" x2="2475" y2="475"/>
+    <line class="blue" y1="500" x2="2475" y2="500"/>
+    <line class="red" y1="1000" x2="2475" y2="1000"/>
+    <line class="red" y1="975" x2="2475" y2="975"/>
+    <line class="red" y1="950" x2="2475" y2="950"/>
+    <line class="red" y1="925" x2="2475" y2="925"/>
+    <line class="red" y1="900" x2="2475" y2="900"/>
+    <line class="blue" y1="875" x2="2475" y2="875"/>
+    <line class="blue" y1="850" x2="2475" y2="850"/>
+    <line class="red" y1="825" x2="2475" y2="825"/>
+    <line class="blue" y1="800" x2="2475" y2="800"/>
+    <line class="blue" y1="775" x2="2475" y2="775"/>
+    <line class="blue" y1="750" x2="2475" y2="750"/>
+    <line class="blue" y1="725" x2="2475" y2="725"/>
+    <line class="red" y1="700" x2="2475" y2="700"/>
+    <line class="blue" y1="675" x2="2475" y2="675"/>
+    <line class="blue" y1="650" x2="2475" y2="650"/>
+    <line class="red" y1="625" x2="2475" y2="625"/>
+    <line class="red" y1="600" x2="2475" y2="600"/>
+    <line class="red" y1="575" x2="2475" y2="575"/>
+    <line class="red" y1="550" x2="2475" y2="550"/>
+    <line class="red" y1="525" x2="2475" y2="525"/>
+  </g>
+  <g class="vertical">
+    <line class="green" x1="25" x2="25" y2="2475"/>
+    <line class="green" x1="50" x2="50" y2="2475"/>
+    <line class="green" x1="75" x2="75" y2="2475"/>
+    <line class="green" x1="100" x2="100" y2="2475"/>
+    <line class="green" x1="125" x2="125" y2="2475"/>
+    <line class="green" x1="150" x2="150" y2="2475"/>
+    <line class="green" x1="175" x2="175" y2="2475"/>
+    <line class="green" x1="200" x2="200" y2="2475"/>
+    <line class="green" x1="225" x2="225" y2="2475"/>
+    <line class="red" x1="250" x2="250" y2="2475"/>
+    <line class="red" x1="275" x2="275" y2="2475"/>
+    <line class="red" x1="300" x2="300" y2="2475"/>
+    <line class="red" x1="325" x2="325" y2="2475"/>
+    <line class="red" x1="350" x2="350" y2="2475"/>
+    <line class="green" x1="375" x2="375" y2="2475"/>
+    <line class="green" x1="400" x2="400" y2="2475"/>
+    <line class="red" x1="425" x2="425" y2="2475"/>
+    <line class="green" x1="450" x2="450" y2="2475"/>
+    <line class="gold" x1="475" x2="475" y2="2475"/>
+    <line class="gold" x1="500" x2="500" y2="2475"/>
+    <line class="green" x1="525" x2="525" y2="2475"/>
+    <line class="red" x1="550" x2="550" y2="2475"/>
+    <line class="green" x1="575" x2="575" y2="2475"/>
+    <line class="green" x1="600" x2="600" y2="2475"/>
+    <line class="red" x1="625" x2="625" y2="2475"/>
+    <line class="red" x1="650" x2="650" y2="2475"/>
+    <line class="red" x1="675" x2="675" y2="2475"/>
+    <line class="red" x1="700" x2="700" y2="2475"/>
+    <line class="red" x1="725" x2="725" y2="2475"/>
+    <line class="green" x1="750" x2="750" y2="2475"/>
+    <line class="green" x1="775" x2="775" y2="2475"/>
+    <line class="green" x1="800" x2="800" y2="2475"/>
+    <line class="green" x1="825" x2="825" y2="2475"/>
+    <line class="green" x1="850" x2="850" y2="2475"/>
+    <line class="green" x1="875" x2="875" y2="2475"/>
+    <line class="green" x1="900" x2="900" y2="2475"/>
+    <line class="green" x1="925" x2="925" y2="2475"/>
+    <line class="green" x1="950" x2="950" y2="2475"/>
+    <line class="blue" x1="975" x2="975" y2="2475"/>
+    <line class="blue" x1="1000" x2="1000" y2="2475"/>
+    <line class="blue" x1="1025" x2="1025" y2="2475"/>
+    <line class="blue" x1="1050" x2="1050" y2="2475"/>
+    <line class="blue" x1="1075" x2="1075" y2="2475"/>
+    <line class="red" x1="1100" x2="1100" y2="2475"/>
+    <line class="blue" x1="1125" x2="1125" y2="2475"/>
+    <line class="blue" x1="1150" x2="1150" y2="2475"/>
+    <line class="blue" x1="1175" x2="1175" y2="2475"/>
+    <line class="blue" x1="1200" x2="1200" y2="2475"/>
+    <line class="blue" x1="1225" x2="1225" y2="2475"/>
+    <line class="blue" x1="1250" x2="1250" y2="2475"/>
+    <line class="blue" x1="1275" x2="1275" y2="2475"/>
+    <line class="blue" x1="1300" x2="1300" y2="2475"/>
+    <line class="blue" x1="1325" x2="1325" y2="2475"/>
+    <line class="blue" x1="1350" x2="1350" y2="2475"/>
+    <line class="blue" x1="1375" x2="1375" y2="2475"/>
+    <line class="blue" x1="1400" x2="1400" y2="2475"/>
+    <line class="blue" x1="1425" x2="1425" y2="2475"/>
+    <line class="blue" x1="1450" x2="1450" y2="2475"/>
+    <line class="blue" x1="2450" x2="2450" y2="2475"/>
+    <line class="blue" x1="2425" x2="2425" y2="2475"/>
+    <line class="blue" x1="2400" x2="2400" y2="2475"/>
+    <line class="blue" x1="2375" x2="2375" y2="2475"/>
+    <line class="blue" x1="2350" x2="2350" y2="2475"/>
+    <line class="red" x1="2325" x2="2325" y2="2475"/>
+    <line class="blue" x1="2300" x2="2300" y2="2475"/>
+    <line class="blue" x1="2275" x2="2275" y2="2475"/>
+    <line class="blue" x1="2250" x2="2250" y2="2475"/>
+    <line class="blue" x1="2225" x2="2225" y2="2475"/>
+    <line class="blue" x1="2200" x2="2200" y2="2475"/>
+    <line class="blue" x1="2175" x2="2175" y2="2475"/>
+    <line class="blue" x1="2150" x2="2150" y2="2475"/>
+    <line class="blue" x1="2125" x2="2125" y2="2475"/>
+    <line class="blue" x1="2100" x2="2100" y2="2475"/>
+    <line class="blue" x1="2075" x2="2075" y2="2475"/>
+    <line class="blue" x1="2050" x2="2050" y2="2475"/>
+    <line class="blue" x1="2025" x2="2025" y2="2475"/>
+    <line class="blue" x1="2000" x2="2000" y2="2475"/>
+    <line class="blue" x1="1975" x2="1975" y2="2475"/>
+    <line class="red" x1="1475" x2="1475" y2="2475"/>
+    <line class="red" x1="1500" x2="1500" y2="2475"/>
+    <line class="red" x1="1525" x2="1525" y2="2475"/>
+    <line class="red" x1="1550" x2="1550" y2="2475"/>
+    <line class="red" x1="1575" x2="1575" y2="2475"/>
+    <line class="blue" x1="1600" x2="1600" y2="2475"/>
+    <line class="blue" x1="1625" x2="1625" y2="2475"/>
+    <line class="red" x1="1650" x2="1650" y2="2475"/>
+    <line class="blue" x1="1675" x2="1675" y2="2475"/>
+    <line class="blue" x1="1700" x2="1700" y2="2475"/>
+    <line class="blue" x1="1725" x2="1725" y2="2475"/>
+    <line class="blue" x1="1750" x2="1750" y2="2475"/>
+    <line class="red" x1="1775" x2="1775" y2="2475"/>
+    <line class="blue" x1="1800" x2="1800" y2="2475"/>
+    <line class="blue" x1="1825" x2="1825" y2="2475"/>
+    <line class="red" x1="1850" x2="1850" y2="2475"/>
+    <line class="red" x1="1875" x2="1875" y2="2475"/>
+    <line class="red" x1="1900" x2="1900" y2="2475"/>
+    <line class="red" x1="1925" x2="1925" y2="2475"/>
+    <line class="red" x1="1950" x2="1950" y2="2475"/>
+  </g>
+</svg>
