@@ -5,8 +5,12 @@ Homepage
 .main {
   background-color: white;
   transition: background-color ease calc(var(--animation-speed-slow));
-  padding: 0;
   overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .js-animate {
@@ -225,7 +229,6 @@ Homepage
   animation-duration: var(--beat-whole);
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  position: relative;
 }
 
 .js-animate .steve-chab-abstract,
