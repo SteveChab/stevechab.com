@@ -54,11 +54,11 @@
     </a>
   </header>
   <main class="main main--atextual">
-    <dl class="definition-list" tabindex="0" hidden>
+    <dl class="definition-list" hidden aria-live="polite">
       <dt class="definition-list__term">ubiquitous computing</dt>
       <dd class="definition-list__definition">this</dd>
     </dl>
-    <div class="decorative-terms" aria-hidden="true">
+    <div class="decorative-terms" aria-hidden="true" hidden>
       <span class="decorative-terms__term">ubiquitous computing</span>
     </div>
 
@@ -83,7 +83,7 @@
         document.querySelector(".definition-list__term").innerHTML = term;
         document.querySelector(".definition-list__definition").innerHTML = definition;
         document.querySelector(".decorative-terms__term").innerHTML = term;
-        document.querySelector(".definition-list").focus();
+        document.querySelector(".decorative-terms").removeAttribute("hidden");
         document.querySelector(".definition-list").removeAttribute("hidden");
       }
     }
