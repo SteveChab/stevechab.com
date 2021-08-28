@@ -429,7 +429,6 @@ button:focus {
   content: "\00270e";
 }
 
-
 .figure {
   position: relative;
   margin: 0;
@@ -509,11 +508,11 @@ button:focus {
 
 .decorative-terms {
   overflow: hidden;
-  width: 100vw;
-  height: 100vh;
   position: absolute;
-  left: 0;
   top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: -1;
 }
 
@@ -549,7 +548,7 @@ button:focus {
 }
 
 .action-button {
-  position: fixed;
+  position: absolute;
   left: 1rem;
   bottom: 1rem;
 }
