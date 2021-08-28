@@ -25,14 +25,14 @@ $(document).ready(function() {
       'tabindex': -1
     });
     
-    // $("#tracks a").each(function(i){
-    //     i++;
-    //     var idee = 't'+i;
-    //     $(this)
-    //         .attr('id', idee) // add an id of t1, t2, etc.
-    //         .click(function(){ toggle(i); });
+    $("#tracks a").each(function(i){
+        i++;
+        var idee = 't'+i;
+        $(this)
+            .attr('id', idee) // add an id of t1, t2, etc.
+            .click(function(){ toggle(i); });
         
-    // });
+    });
 
 
     function animate() {
