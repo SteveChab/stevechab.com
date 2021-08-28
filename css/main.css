@@ -470,11 +470,15 @@ button:focus {
 
 .main--atextual {
   padding: 200px 5vw 5vw 15vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 @keyframes fadein {
   0% { opacity: 0; }
-  80% { opacity: 0; }
   100% { opacity: 1; }
 }
 
@@ -483,9 +487,13 @@ button:focus {
   width: 100%;
   overflow: hidden;
   animation-name: fadein;
-  animation-duration: calc(var(--animation-speed-slow) * 2);
+  animation-duration: calc(var(--animation-speed-slow));
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
+}
+
+.definition-list:focus {
+  outline: none;
 }
 
 .definition-list__term {
@@ -523,7 +531,7 @@ button:focus {
 .decorative-terms__term {
   position: absolute;
   right: -2vw;
-  bottom: 10vh;
+  bottom: 25vh;
   font-size: 25vw;
   line-height: 1em;
   letter-spacing: -.025em;
