@@ -447,7 +447,7 @@ button:focus {
   bottom: 0;
   left: 0;
   overflow: hidden;
-  height: auto;
+  height: 100%;
 }
 
 .figure__caption__link {
