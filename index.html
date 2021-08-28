@@ -25,34 +25,6 @@
 <body>
   <header class="header">
     <span class="sr-only">Steve Chab Homepage</span>
-    <!--
-    <a class="header__link-home" href="/">
-      <span class="sr-only">Steve Chab Homepage</span>
-      <svg aria-hidden="true" class="header__link-home__wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 337.3 49.9">
-        <g class="steve-chab">
-          <g class="steve steve1" data-name="steve">
-            <polyline class="no-fill s1 s" points="26.5 7.1 9.5 24.1 43.5 24.1 26.5 41.1"/>
-            <g class="t1 t">
-              <line class="no-fill" x1="60.6" y1="7.1" x2="60.6" y2="41.1"/>
-              <line class="no-fill" x1="77.6" y1="24.1" x2="43.5" y2="24.1"/>
-            </g>
-            <polyline class="no-fill e1-1 e" points="111.6 24.1 77.6 24.1 94.6 41.1"/>
-            <polyline class="no-fill v1 v" points="111.6 24.1 128.6 41.1 145.6 24.1"/>
-            <polyline class="no-fill e1-2 e" points="179.6 24.1 145.6 24.1 162.6 41.1"/>
-          </g>
-          <g class="chab chab1" data-name="chab">
-            <polyline class="no-fill c1 c" points="230.2 41.5 196.1 41.5 230.2 7.5 230.2 24.5"/>
-            <g class="h1 h">
-              <line class="no-fill" x1="264.2" y1="7.5" x2="230.2" y2="41.5"/>
-              <line class="no-fill" x1="264.2" y1="41.5" x2="247.2" y2="24.5"/>
-            </g>
-            <polyline class="no-fill a1 a" points="298.2 41.5 281.2 24.5 264.2 41.5"/>
-            <polyline class="no-fill b1 b" points="332.2 7.5 298.2 41.5 332.2 41.5 315.2 24.5"/>
-          </g>
-        </g>
-      </svg>
-    </a>
-    -->
     <a class="header__link-menu icon" href="/menu/">
       <span class="sr-only">Menu</span>
     </a>
@@ -1541,26 +1513,32 @@
         <h3 role="marquee" aria-live="polite" class="audio-player__track-title__heading">Song Title</h3>
       </marquee>
       
-      <button class="icon play-button audio-player__button">
+      <button class="icon play-button audio-player__button" aria-pressed="false">
         <span class="sr-only">Play Music</span>
       </button>
       <button class="icon audio-player__button audio-player__button--next">
         <span class="sr-only">Next Song</span>
       </button>
 
-      <audio class="audio-player__song audio-player__song--1" title="Betty Boom Bap Boop by Steve Chab" controls loop aria-hidden="true" hidden>
+      <audio class="audio-player__song audio-player__song--1" title="Betty Boom Bap Boop by Steve Chab" controls loop>
         <source src="assets/Betty-Boom-Bap-Boop-Steve-Chab.mp3" type="audio/mpeg">
       </audio>
-      <audio class="audio-player__song audio-player__song--2" title="Lamby by Steve Chab" controls loop aria-hidden="true" hidden>
+      <audio class="audio-player__song audio-player__song--2" title="Lamby by Steve Chab" controls loop>
         <source src="assets/Lamby-Steve-Chab.mp3" type="audio/mpeg">
       </audio>
-      <audio class="audio-player__song audio-player__song--3" title="The Answer by Steve Chab" controls loop aria-hidden="true" hidden>
+      <audio class="audio-player__song audio-player__song--3" title="The Answer by Steve Chab" controls loop>
         <source src="assets/The-Answer-Steve-Chab.mp3" type="audio/mpeg">
       </audio>
     </div>
   </main>
   <script>document.querySelector(".no-js").classList.remove("no-js");</script>
   <script>
+    var tracks = document.querySelectorAll(".audio-player__song");
+    tracks.forEach((track) => {
+      track.setAttribute("aria-hidden", "true");
+      track.setAttribute("tabindex", "-1");
+    });
+
     var playButton = document.querySelector(".play-button");
     var nextButton = document.querySelector(".audio-player__button--next");
     var currentTrack = 1;
@@ -1577,10 +1555,12 @@
       if(animating) {
         main.classList.remove("js-animate", "song" + currentTrack);
         playButton.classList.remove("play-button--pause");
+        playButton.setAttribute("aria-pressed","false");
         song.pause();
       } else {
         main.classList.add("js-animate", "song" + currentTrack);
         playButton.classList.add("play-button--pause");
+        playButton.setAttribute("aria-pressed","true");
         song.play();
       }
     }
