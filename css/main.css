@@ -325,6 +325,12 @@ button:focus {
   padding-right: .65rem;
 }
 
+@media (max-width: 767px) {
+  .header__link-home {
+    width: calc(var(--icon-height) * 3.5);
+  }
+}
+
 .header__link-home .no-fill {
   stroke-width: 2px;
   stroke: var(--color-gray-dark);
