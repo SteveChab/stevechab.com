@@ -440,8 +440,13 @@ button:focus {
   object-fit: cover;
 }
 
-.figure__media--full-screen {
-  height:100vh;
+.figure__media--tartan {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 .figure__caption__link {
