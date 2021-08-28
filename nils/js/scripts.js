@@ -1,7 +1,6 @@
 $(document).ready(function() {
     var btn_toggle = document.getElementById('toggle');
     var audio = document.getElementsByTagName("audio"); // audio is an HTMLcollection (not an array)
-    var tracks = document.getElementById('tracks').getElementsByTagName("a"); // how many tracks in list
     var totalTracks = audio.length / 2; // number of total tracks (2.5 rounds up to 3)
     var hasPlayed = 0; // has user played any audio yet?
     var playing = 0; // is playing?
@@ -17,7 +16,6 @@ $(document).ready(function() {
         }
         
         $('img[alt=sun]').css('opacity', 0.5);
-
         $('#slider').val(50); // reset slider to middle
     }
 
@@ -27,14 +25,14 @@ $(document).ready(function() {
       'tabindex': -1
     });
     
-    $("#tracks a").each(function(i){
-        i++;
-        var idee = 't'+i;
-        $(this)
-            .attr('id', idee) // add an id of t1, t2, etc.
-            .click(function(){ toggle(i); });
+    // $("#tracks a").each(function(i){
+    //     i++;
+    //     var idee = 't'+i;
+    //     $(this)
+    //         .attr('id', idee) // add an id of t1, t2, etc.
+    //         .click(function(){ toggle(i); });
         
-    });
+    // });
 
 
     function animate() {
@@ -48,10 +46,10 @@ $(document).ready(function() {
     
 
     function toggle(what) {
-
         if (playing === 1) {
             steve.pause();
             nils.pause();
+            btn_toggle.classList.add("play-button--pause");
 
             // if clicking a different track
             if (track != what){playing = 0;} // keep playing=0 so track plays
@@ -75,26 +73,19 @@ $(document).ready(function() {
             steve.play();
             nils.play();
             playing = 1;
-            btn_toggle.innerHTML = "<b>&#9616;&#9616;</b>";
+            btn_toggle.classList.add("play-button--pause");
+            btn_toggle.setAttribute("aria-pressed","true");
         } else {
             steve.pause();
             nils.pause();
             playing = 0;
-            btn_toggle.innerHTML = "<i>&#9654;<i>";
+            btn_toggle.classList.remove("play-button--pause");
+            btn_toggle.setAttribute("aria-pressed","false");
         }
 
         hasPlayed = 1; // user has hit the play button
     }
     
-    
-    $(document).keypress(function(e) {
-        if(e.which === 32) {
-            toggle(track);
-            $('#toggle').focus();
-            return false;
-        }
-    });
-
 
     function goto(where) {
         var go = where + track;

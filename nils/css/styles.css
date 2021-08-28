@@ -88,20 +88,6 @@ section {
   display: none;
 }
 
-#controls a {
-  background-color: transparent;
-  border: 0;
-  display: inline-block;
-  position: relative;
-  padding: 20px;
-  text-decoration: none;
-}
-
-#controls a:focus,
-#controls a:hover {
-  background-color: black;
-}
-
 #controls b {
     font-size: .65em;
     position: relative;
@@ -110,17 +96,11 @@ section {
 }
 
 #tracks {
-    font-size: 1.35em;
-    list-style-position: inside;
     padding: 0;
-    margin: 0 0 1em;
-    line-height: 1.35em;
+    margin: 1rem 0;
 }
 
 #tracks li {
-    font-family: 'Times New Roman', 'Georgia', serif;
-    font-size: 1.15em;
-    padding: 0;
     display: inline;
 }
 

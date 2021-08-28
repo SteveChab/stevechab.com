@@ -550,6 +550,14 @@ button:focus {
   content: "\00ff06";
 }
 
+.prev-button::after {
+  content: "\0000ab";
+}
+
+.next-button::after {
+  content: "\000bb";
+}
+
 .play-button::after {
   content: "";
   border: .5em solid transparent;
@@ -564,6 +572,10 @@ button:focus {
     left ease var(--animation-speed-fast);
 }
 
+.invert .play-button::after {
+  border-left: .75em solid white;
+}
+
 .play-button--pause::after {
   border: 0 solid transparent;
   border-left: .25em solid black;
@@ -571,6 +583,11 @@ button:focus {
   width: 8%;
   height: 40%;
   left: 50%;
+}
+
+.invert .play-button--pause::after {
+  border-left: .25em solid white;
+  border-right: .25em solid white;
 }
 
 @keyframes biophoto {

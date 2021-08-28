@@ -62,9 +62,15 @@
     
     <section class="invert">        
         <div id="controls">
-            <a id="prev" href="javascript:void(0)">&laquo;</a>
-            <a id="toggle" href="javascript:void(0)"><i>&#9654;</i></a>
-            <a id="next" href="javascript:void(0)">&raquo;</a>
+            <button id="prev" class="icon prev-button">
+              <span class="sr-only">Previous Track</span>
+            </button>
+            <button id="toggle" class="icon play-button" aria-pressed="false">
+              <span class="sr-only">Play Music</span>
+            </button>
+            <button id="next" class="icon next-button">
+              <span class="sr-only">Next Track</span>
+            </button>
         </div>
         
         <ol id="tracks">
@@ -78,27 +84,27 @@
         <input id="slider" type="range" min="0" max="100">
 
         <div id="audio">
-          <audio controls class="audio__steve" id="steve1" preload="auto">
+          <audio controls class="audio__steve" id="steve1" preload="auto" aria-hidden="true" hidden>
               <source src="audio/SteveChab-Western.mp3" type="audio/mpeg">
               Visit <a href="https://stevechab.bandcamp.com/album/at-the-western-wall-some-will-believe-what-god-says">soundcloud.com/stevechab/sets/nils</a> to hear this audio.
           </audio>
-          <audio controls class="audio__steve" id="steve2" preload="none">
+          <audio controls class="audio__steve" id="steve2" preload="none" aria-hidden="true" hidden>
               <source src="audio/SteveChab-WillBelieve.mp3" type="audio/mpeg">
               Visit <a href="https://stevechab.bandcamp.com/album/at-the-western-wall-some-will-believe-what-god-says">soundcloud.com/stevechab/sets/nils</a> to hear this audio.
           </audio>
-          <audio controls class="audio__steve" id="steve3" preload="none">
+          <audio controls class="audio__steve" id="steve3" preload="none" aria-hidden="true" hidden>
               <source src="audio/SteveChab-WhatGod.mp3" type="audio/mpeg">
               Visit <a href="https://stevechab.bandcamp.com/album/at-the-western-wall-some-will-believe-what-god-says">soundcloud.com/stevechab/sets/nils</a> to hear this audio.
           </audio>
-          <audio controls class="audio__nils" id="nils1" preload="auto">
+          <audio controls class="audio__nils" id="nils1" preload="auto" aria-hidden="true" hidden>
             <source src="audio/NilsFrahm-Wall.mp3" type="audio/mpeg">
             Visit <a href="https://stevechab.bandcamp.com/album/at-the-western-wall-some-will-believe-what-god-says">soundcloud.com/stevechab/sets/nils</a> to hear this audio.
         </audio>
-        <audio controls class="audio__nils" id="nils2" preload="none">
+        <audio controls class="audio__nils" id="nils2" preload="none" aria-hidden="true" hidden>
             <source src="audio/NilsFrahm-Some.mp3" type="audio/mpeg">
             Visit <a href="https://stevechab.bandcamp.com/album/at-the-western-wall-some-will-believe-what-god-says">soundcloud.com/stevechab/sets/nils</a> to hear this audio.
         </audio>
-        <audio controls class="audio__nils" id="nils3" preload="none">
+        <audio controls class="audio__nils" id="nils3" preload="none" aria-hidden="true" hidden>
             <source src="audio/NilsFrahm-Says.mp3" type="audio/mpeg">
             Visit <a href="https://stevechab.bandcamp.com/album/at-the-western-wall-some-will-believe-what-god-says">soundcloud.com/stevechab/sets/nils</a> to hear this audio.
         </audio>
