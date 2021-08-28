@@ -119,6 +119,7 @@ Homepage
 
 .audio-player__track-title__heading {
   margin: .5rem;
+  font-size: 1rem;
 }
 
 .audio-player__button {
@@ -128,22 +129,6 @@ Homepage
 
 .no-js .audio-player__button {
   display: none;
-}
-
-.audio-player__button--play::after {
-  content: "\0025b6";
-  margin-left: .05em;
-  font-size: 1.25rem;
-}
-
-/* This is the pause button. */
-.js-animate .audio-player__button--play::after {
-  content: " ";
-  margin: 0;
-  border-left: 0.25em solid #000;
-  border-right: 0.25em solid #000;
-  width: 8%;
-  height: 40%;
 }
 
 .audio-player__button--next {

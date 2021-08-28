@@ -550,6 +550,29 @@ button:focus {
   content: "\00ff06";
 }
 
+.play-button::after {
+  content: "";
+  border: .5em solid transparent;
+  border-left: .75em solid black;
+  width: 0;
+  height: 0;
+  left: 65%;
+  transition:
+    border ease var(--animation-speed-fast),
+    width ease var(--animation-speed-fast),
+    height ease var(--animation-speed-fast),
+    left ease var(--animation-speed-fast);
+}
+
+.play-button--pause::after {
+  border: 0 solid transparent;
+  border-left: .25em solid black;
+  border-right: .25em solid black;
+  width: 8%;
+  height: 40%;
+  left: 50%;
+}
+
 @keyframes biophoto {
   0%, 50%, 53%, 100% {
     filter: saturate(1);

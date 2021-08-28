@@ -1541,27 +1541,27 @@
         <h3 role="marquee" aria-live="polite" class="audio-player__track-title__heading">Song Title</h3>
       </marquee>
       
-      <button class="icon audio-player__button audio-player__button--play">
-        <span class="sr-only">Play/Pause Music</span>
+      <button class="icon play-button audio-player__button">
+        <span class="sr-only">Play Music</span>
       </button>
       <button class="icon audio-player__button audio-player__button--next">
         <span class="sr-only">Next Song</span>
       </button>
 
-      <audio class="audio-player__song audio-player__song--1" title="Betty Boom Bap Boop by Steve Chab" controls loop>
+      <audio class="audio-player__song audio-player__song--1" title="Betty Boom Bap Boop by Steve Chab" controls loop aria-hidden="true" hidden>
         <source src="assets/Betty-Boom-Bap-Boop-Steve-Chab.mp3" type="audio/mpeg">
       </audio>
-      <audio class="audio-player__song audio-player__song--2" title="Lamby by Steve Chab" controls loop>
+      <audio class="audio-player__song audio-player__song--2" title="Lamby by Steve Chab" controls loop aria-hidden="true" hidden>
         <source src="assets/Lamby-Steve-Chab.mp3" type="audio/mpeg">
       </audio>
-      <audio class="audio-player__song audio-player__song--3" title="The Answer by Steve Chab" controls loop>
+      <audio class="audio-player__song audio-player__song--3" title="The Answer by Steve Chab" controls loop aria-hidden="true" hidden>
         <source src="assets/The-Answer-Steve-Chab.mp3" type="audio/mpeg">
       </audio>
     </div>
   </main>
   <script>document.querySelector(".no-js").classList.remove("no-js");</script>
   <script>
-    var playButton = document.querySelector(".audio-player__button--play");
+    var playButton = document.querySelector(".play-button");
     var nextButton = document.querySelector(".audio-player__button--next");
     var currentTrack = 1;
     var totalTracks = document.getElementsByTagName("audio").length;
@@ -1576,9 +1576,11 @@
 
       if(animating) {
         main.classList.remove("js-animate", "song" + currentTrack);
+        playButton.classList.remove("play-button--pause");
         song.pause();
       } else {
         main.classList.add("js-animate", "song" + currentTrack);
+        playButton.classList.add("play-button--pause");
         song.play();
       }
     }
