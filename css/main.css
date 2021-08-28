@@ -437,7 +437,7 @@ button:focus {
 
 .figure__media {
   width: 100%;
-  height: calc(100vh - 2rem);
+  height: 80vh;
   object-fit: cover;
 }
 
