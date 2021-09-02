@@ -313,8 +313,8 @@ button:focus {
 .header {
   position: absolute;
   padding: 1rem;
-  z-index: 11;
   width: 100%;
+  z-index: 11;
 }
 
 .header__link-home {
@@ -344,9 +344,10 @@ button:focus {
 }
 
 .header__link-menu {
-  float: right;
   position: fixed;
   right: 1rem;
+  top: 1rem;
+  z-index: 11;
 }
 
 .header__link-menu::after {
