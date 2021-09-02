@@ -279,6 +279,23 @@ button:focus {
   filter: invert(1);
 }
 
+/* leave site icon */
+.link--external::after {
+  margin: 0 3px 0 5px;
+  padding: 0;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  outline: 1px solid;
+  box-shadow: 3px -3px 0 0;
+  opacity: .75;
+  position: relative;
+  top: -.25em;
+  overflow: hidden;
+  content: "";
+  line-height: 0;
+}
+
 .invert a,
 .invert button {
   color: white;
