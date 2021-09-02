@@ -281,8 +281,7 @@ button:focus {
 
 /* leave site icon */
 .link--external::after {
-  margin: 0 3px 0 5px;
-  padding: 0;
+  margin-right: .35em;
   display: inline-block;
   width: 6px;
   height: 6px;
@@ -290,10 +289,8 @@ button:focus {
   box-shadow: 3px -3px 0 0;
   opacity: .75;
   position: relative;
-  top: -.25em;
-  overflow: hidden;
+  top: -.35em;
   content: "";
-  line-height: 0;
 }
 
 .invert a,
