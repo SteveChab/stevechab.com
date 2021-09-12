@@ -651,3 +651,24 @@ button:focus {
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
+
+
+@media print {
+  body {
+    display: none;
+  }
+
+  html::after {
+    content: "Jesus \A loves \A you!";
+    font-family: 'Roboto Slab', serif;
+    font-size: 20vw;
+    letter-spacing: -1px;
+    font-weight: 700;
+    line-height: .9em;
+    text-transform: uppercase;
+    display: block;
+    white-space: pre;
+    text-align: center;
+    margin-top: 1em;
+  }
+}
