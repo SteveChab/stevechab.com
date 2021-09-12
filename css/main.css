@@ -282,6 +282,7 @@ button:focus {
 /* leave site icon */
 .link--external::after {
   margin-right: .35em;
+  margin-left: 3px;
   display: inline-block;
   width: 6px;
   height: 6px;
