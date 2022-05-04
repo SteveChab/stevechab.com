@@ -38,11 +38,13 @@ Homepage
 }
 
 .song1 .audio-player__button--next::after {
-  content: "\001bbf";
+  content: "\002654";
+  font-size: 2.5rem;
+  margin-top: -.09em;
 }
 
 .song2 .audio-player__button--next::after {
-  content: "\00aa5c";
+  content: "\00203c";
   margin-top: -.025rem;
 }
 
