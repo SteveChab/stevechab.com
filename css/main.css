@@ -428,7 +428,8 @@ button:focus {
   content: "\00ff06";
 }
 .menu__list__item__link--larvascript::before {
-  content: "\00aa5c";
+  content: "\00219d";
+  font-size: calc(var(--menu-icon-size) * .75);
 }
 .menu__list__item__link--tartan::before {
   content: "\0025a6";
@@ -438,14 +439,15 @@ button:focus {
 }
 .menu__list__item__link--discography::before {
   content: "\01d122";
-  margin-left: calc(var(--menu-icon-size) * .075);
+  font-size: calc(var(--menu-icon-size) * .65);
 }
 .menu__list__item__link--discography:focus::before,
 .menu__list__item__link--discography:hover::before {
   margin-left: calc(var(--menu-icon-size));
 }
 .menu__list__item__link--bio::before {
-  content: "\01063f";
+  content: "\002623";
+  font-size: calc(var(--menu-icon-size) * .75);
 }
 .menu__list__item__link--contact::before {
   content: "\00270e";
