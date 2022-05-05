@@ -236,7 +236,7 @@ body {
 }
 
 h1, h2, h3 {
-  margin: 1.65em 0;
+  margin: 1.35em 0;
   line-height: 1.35em;
 }
 
@@ -375,7 +375,7 @@ button:focus {
 }
 
 .menu__list__item {
-  margin: 3vh 0;
+  margin: .65em 0;
   list-style-type: none;
   position: relative;
 }
@@ -433,6 +433,12 @@ button:focus {
 }
 .menu__list__item__link--tartan::before {
   content: "\0025a6";
+  content: "\002a69";
+  font-size: calc(var(--menu-icon-size) * .75);
+}
+.menu__list__item__link--tartan:focus::before,
+.menu__list__item__link--tartan:hover::before {
+  top: -1em;
 }
 .menu__list__item__link--art::before {
   content: "\0026cb";
@@ -446,7 +452,7 @@ button:focus {
   margin-left: calc(var(--menu-icon-size));
 }
 .menu__list__item__link--bio::before {
-  content: "\002623";
+  content: "\00273e";
   font-size: calc(var(--menu-icon-size) * .75);
 }
 .menu__list__item__link--contact::before {

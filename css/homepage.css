@@ -37,19 +37,16 @@ Homepage
   --transform: scale(7) rotate(90deg) translate(23%, 2%);
 }
 
-.song1 .audio-player__button--next::after {
-  content: "\002654";
-  font-size: 2.5rem;
-  margin-top: -.09em;
+.song1 .audio-player__button--next::before {
+  content: "\002318";
 }
 
-.song2 .audio-player__button--next::after {
-  content: "\00203c";
-  margin-top: -.025rem;
+.song2 .audio-player__button--next::before {
+  content: "\002667";
 }
 
-.song3 .audio-player__button--next::after {
-  content: "\002620";
+.song3 .audio-player__button--next::before {
+  content: "\00224b";
   font-size: 2.5rem;
   margin-top: -.09em;
 }
