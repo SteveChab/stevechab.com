@@ -46,9 +46,7 @@ Homepage
 }
 
 .song3 .audio-player__button--next::before {
-  content: "\00224b";
-  font-size: 2rem;
-  margin-top: -.2rem;
+  content: "\002766";
 }
 
 .js-animate .wordmark-container__wordmark {
