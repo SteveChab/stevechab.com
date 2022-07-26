@@ -190,8 +190,7 @@ Custom Styles
   /* --container-padding: 5vw 20vw; */
   --container-padding: 2rem;
 
-  --font-stack-headings: 'Times New Roman', 'Times', 'Roboto Slab', serif;
-  --font-stack-body-copy: 'Roboto Slab', 'Times New Roman', 'Times', serif;
+  --font-stack: 'Roboto Slab', 'Times New Roman', 'Times', serif;
 }
 
 /* Little Screens */
@@ -216,7 +215,7 @@ Custom Styles
 html {
   background-color: white;
   color: var(--color-gray-dark);
-  font-family: var(--font-stack-body-copy);
+  font-family: var(--font-stack);
   font-weight: 300;
   font-size: 1.35rem;
   line-height: 1.65em;
@@ -232,6 +231,10 @@ body {
   margin: 0;
 }
 
+.bg-light-gray { background-color: var(--color-gray-light); }
+.text-align-center { text-align: center; }
+.text-align-right { text-align: right; }
+
 .container {
   padding: var(--container-padding);
   transition: padding ease var(--animation-speed-fast);
@@ -241,26 +244,71 @@ body {
   padding-top: 111px;
 }
 
+.no-margin {
+  margin: 0;
+}
+
 .centered-content,
 article {
   margin: 0 auto;
   max-width: 65ch;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 2rem;
+  justify-items: stretch;
+  align-items: end;
+}
+
+.grid-box--border {
+  outline: solid 2px var(--color-gray-light);
+  padding: 0 1rem;
+  background-color: var(--color-gray-light);
+}
+
+.grid-box--span-2 {grid-column: span 2}
+.grid-box--span-3 {grid-column: span 3}
+.grid-box--span-4 {grid-column: span 4}
+.grid-box--span-5 {grid-column: span 5}
+.grid-box--span-6 {grid-column: span 6}
+.grid-box--span-7 {grid-column: span 7}
+.grid-box--span-8 {grid-column: span 8}
+.grid-box--span-9 {grid-column: span 9}
+
+.yt-container {
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  position: relative;
+}
+.yt-embed {
+  position:  absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 h1, h2, h3 {
   margin: 1em 0;
   line-height: 1.35em;
-  font-family: var(--font-stack-headings);
-  letter-spacing: -.025em;
+  font-weight: lighter;
+  color: var(--color-gray-dark);
 }
 
 h1 {
   font-size: 2em;
 }
 
-p {
+ul, ol, p {
   line-height: 1.65em;
   margin: 1.65em 0;
+}
+
+li {
+  margin: .65em 0;
 }
 
 img,
@@ -680,7 +728,22 @@ button:focus {
   animation-timing-function: ease;
 }
 
+/* ===================== 
+Steve Chab Band
+======================== */
 
+.steve-chab-band-logo-stacked {
+  width: 100%;
+}
+
+.steve-chab-band-logo-bug {
+  width: var(--icon-height);
+}
+
+
+/* ===================== 
+Print Special Message
+======================== */
 @media print {
   body {
     display: none;
