@@ -188,6 +188,9 @@ Custom Styles
   --animation-speed-fast: .3s;
 
   --container-padding: 5vw 20vw;
+
+  --font-stack-headings: 'Times New Roman', 'Times', 'Roboto Slab', serif;
+  --font-stack-body-copy: 'Roboto Slab', 'Times New Roman', 'Times', serif;
 }
 
 @media (max-width: 767px) {
@@ -210,7 +213,7 @@ Custom Styles
 html {
   background-color: white;
   color: var(--color-gray-dark);
-  font-family: 'Roboto Slab', serif;
+  font-family: var(--font-stack-body-copy);
   font-weight: 300;
   font-size: 1.35rem;
   line-height: 1.65em;
@@ -236,8 +239,13 @@ body {
 }
 
 h1, h2, h3 {
-  margin: 1.35em 0;
+  margin: 1em 0;
   line-height: 1.35em;
+  font-family: var(--font-stack-headings);
+}
+
+h1 {
+  font-size: 2em;
 }
 
 p {
