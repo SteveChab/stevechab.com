@@ -187,7 +187,6 @@ Custom Styles
   --animation-speed-slow: 1s;
   --animation-speed-fast: .3s;
 
-  /* --container-padding: 5vw 20vw; */
   --container-padding: 2rem;
 
   --font-stack: 'Roboto Slab', 'Times New Roman', 'Times', serif;
@@ -196,15 +195,7 @@ Custom Styles
 /* Little Screens */
 @media (max-width: 767px) {
   :root {
-    /* --container-padding: 2rem; */
     --icon-height: 50px;
-  }
-}
-
-/* Big Screens */
-@media (min-width: 1441px) {
-  :root {
-    /* --container-padding: 5vw 30vw; */
   }
 }
 
@@ -256,7 +247,7 @@ article {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
   justify-items: stretch;
   align-items: end;
@@ -268,14 +259,20 @@ article {
   background-color: var(--color-gray-light);
 }
 
-.grid-box--span-2 {grid-column: span 2}
-.grid-box--span-3 {grid-column: span 3}
-.grid-box--span-4 {grid-column: span 4}
-.grid-box--span-5 {grid-column: span 5}
-.grid-box--span-6 {grid-column: span 6}
-.grid-box--span-7 {grid-column: span 7}
-.grid-box--span-8 {grid-column: span 8}
-.grid-box--span-9 {grid-column: span 9}
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(9, 1fr);
+  }
+
+  .grid-box--span-2 {grid-column: span 2}
+  .grid-box--span-3 {grid-column: span 3}
+  .grid-box--span-4 {grid-column: span 4}
+  .grid-box--span-5 {grid-column: span 5}
+  .grid-box--span-6 {grid-column: span 6}
+  .grid-box--span-7 {grid-column: span 7}
+  .grid-box--span-8 {grid-column: span 8}
+  .grid-box--span-9 {grid-column: span 9}
+}
 
 .yt-container {
   padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
