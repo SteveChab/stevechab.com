@@ -187,22 +187,25 @@ Custom Styles
   --animation-speed-slow: 1s;
   --animation-speed-fast: .3s;
 
-  --container-padding: 5vw 20vw;
+  /* --container-padding: 5vw 20vw; */
+  --container-padding: 2rem;
 
   --font-stack-headings: 'Times New Roman', 'Times', 'Roboto Slab', serif;
   --font-stack-body-copy: 'Roboto Slab', 'Times New Roman', 'Times', serif;
 }
 
+/* Little Screens */
 @media (max-width: 767px) {
   :root {
-    --container-padding: 2rem;
+    /* --container-padding: 2rem; */
     --icon-height: 50px;
   }
 }
 
+/* Big Screens */
 @media (min-width: 1441px) {
   :root {
-    --container-padding: 5vw 30vw;
+    /* --container-padding: 5vw 30vw; */
   }
 }
 
@@ -238,10 +241,17 @@ body {
   padding-top: 111px;
 }
 
+.centered-content,
+article {
+  margin: 0 auto;
+  max-width: 65ch;
+}
+
 h1, h2, h3 {
   margin: 1em 0;
   line-height: 1.35em;
   font-family: var(--font-stack-headings);
+  letter-spacing: -.025em;
 }
 
 h1 {

@@ -126,7 +126,5 @@ section {
 }
 
 article {
-    margin: 0 auto;
-    max-width: calc(600px - 2em);
-    padding: 1em;
+  padding: 2rem;
 }
