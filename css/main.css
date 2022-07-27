@@ -214,7 +214,7 @@ html {
 
 @media (max-width: 767px) {
   html {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -225,6 +225,11 @@ body {
 .bg-light-gray { background-color: var(--color-gray-light); }
 .text-align-center { text-align: center; }
 .text-align-right { text-align: right; }
+
+.no-bullets {
+  padding: 0;
+  list-style-type: none;
+}
 
 .container {
   padding: var(--container-padding);
@@ -254,8 +259,12 @@ article {
 }
 
 .grid-box--border {
-  outline: solid 2px var(--color-gray-light);
   padding: 0 1rem;
+  background-color: var(--color-gray-light);
+}
+
+.grid-box--border a,
+.grid-box--border button {
   background-color: var(--color-gray-light);
 }
 
@@ -305,7 +314,7 @@ ul, ol, p {
 }
 
 li {
-  margin: .65em 0;
+  margin: 1em 0;
 }
 
 img,
@@ -729,8 +738,10 @@ button:focus {
 Steve Chab Band
 ======================== */
 
-.steve-chab-band-logo-stacked {
-  width: 100%;
+.steve-chab-band-logo-stacked { width: 100%; }
+
+@media (max-width: 767px) {
+  .steve-chab-band-logo-stacked { padding: 0 25%; }
 }
 
 .steve-chab-band-logo-bug {
