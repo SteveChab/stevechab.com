@@ -499,6 +499,10 @@ button:focus {
 .menu__list__item__link--home::before {
   content: "\002302";
 }
+.menu__list__item__link--band::before {
+  content: "\002056";
+  font-size: calc(var(--menu-icon-size) * .75);
+}
 .menu__list__item__link--nils::before {
   content: "\00263c";
   font-size: calc(var(--menu-icon-size) * .75);
