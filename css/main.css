@@ -500,8 +500,8 @@ button:focus {
   content: "\002302";
 }
 .menu__list__item__link--band::before {
-  content: "\002056";
-  font-size: calc(var(--menu-icon-size) * .75);
+  content: "\002234";
+  font-size: var(--menu-icon-size);
 }
 .menu__list__item__link--nils::before {
   content: "\00263c";
