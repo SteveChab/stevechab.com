@@ -26,10 +26,10 @@
       height: 100%;
       width: 100%;
       position: relative;
+      background-color: var(--color-dark);
     }
 
     .main {
-        background-color: darkslategrey;
         color: white;
         text-shadow:0 0 1rem #000;
         overflow: hidden;
@@ -46,6 +46,7 @@
         transform: rotate(45deg) scale(2);
         position: absolute;
         z-index: 0;
+        mix-blend-mode: luminosity;
     }
 
     /* JS setInterval is better on CPU than CSS keyframes (see "setInterval" in JS below) */

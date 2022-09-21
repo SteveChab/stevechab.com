@@ -117,7 +117,7 @@ textarea {
   overflow: hidden;
   padding: 0;
   position: absolute;
-  white-space: nowrap;
+  var(--color-light)-space: nowrap;
   width: 1px;
   /* 1 */
 }
@@ -135,7 +135,7 @@ textarea {
   margin: 0;
   overflow: visible;
   position: static;
-  white-space: inherit;
+  var(--color-light)-space: inherit;
   width: auto;
 }
 
@@ -176,12 +176,12 @@ textarea {
 Custom Styles
 ===================== */
 :root {
-  --color1: chartreuse;
-  --color2: salmon;
-  --color3: cornflowerblue;
-  --color-gray-medium: #666;
-  --color-gray-dark: #222;
-  --color-gray-light: #eee;
+  --color1: yellowgreen;
+  --color2: chartreuse;
+  --color3: olive;
+  --color-dark: #440; /* invert: #bbf */
+  --color-light: #f98; /* invert: #067 */
+  --color-gray-light: rgba(0, 0, 0, .1);
 
   --icon-height: 65px;
   --animation-speed-slow: 1s;
@@ -204,8 +204,8 @@ Custom Styles
 }
 
 html {
-  background-color: white;
-  color: var(--color-gray-dark);
+  background-color: var(--color-light);
+  color: var(--color-dark);
   font-family: var(--font-stack);
   font-weight: 300;
   font-size: 1.15rem;
@@ -263,11 +263,6 @@ article {
   background-color: var(--color-gray-light);
 }
 
-.grid-box--border a,
-.grid-box--border button {
-  background-color: var(--color-gray-light);
-}
-
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(9, 1fr);
@@ -301,7 +296,7 @@ h1, h2, h3 {
   margin: 1em 0;
   line-height: 1.35em;
   font-weight: lighter;
-  color: var(--color-gray-dark);
+  color: var(--color-dark);
 }
 
 h1 {
@@ -327,14 +322,15 @@ li {
 img,
 iframe {
   max-width: 100%;
+  mix-blend-mode: luminosity;
 }
 
 a,
 button {
-  color: black;
-  background-color: white;
+  color: var(--color-dark);
+  background-color: var(--color-light);
   text-decoration: underline;
-  text-decoration-color: var(--color-gray-medium);
+  text-decoration-color: var(--color-dark);
   text-decoration-skip-ink: none;
   text-decoration-thickness: 2px;
   text-underline-offset: .25em;
@@ -352,7 +348,7 @@ a:hover,
 button:hover,
 a:focus,
 button:focus {
-  outline: .25rem solid white;
+  outline: .25rem solid var(--color-light);
   text-decoration: none;
   outline-offset: 0;
   filter: invert(1);
@@ -375,15 +371,15 @@ button:focus {
 
 .invert a,
 .invert button {
-  color: white;
-  background-color: black;
+  color: var(--color-light);
+  background-color: var(--color-dark);
 }
 
 .invert a:hover,
 .invert button:hover,
 .invert a:focus,
 .invert button:focus {
-  outline: .25rem solid black;
+  outline: .25rem solid var(--color-dark);
 }
 
 .icon {
@@ -427,14 +423,14 @@ button:focus {
 
 .header__link-home .no-fill {
   stroke-width: 2px;
-  stroke: var(--color-gray-dark);
+  stroke: var(--color-dark);
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .invert .header__link-home .no-fill  {
-  stroke: white;
+  stroke: var(--color-light);
 }
 
 .header__link-menu {
@@ -476,7 +472,7 @@ button:focus {
 
 .menu__list__item__link::before {
   --menu-icon-size: 2rem;
-  color: black;
+  color: var(--color-dark);
   z-index: -1;
   top: calc(var(--menu-icon-size) * .35);
   left: calc(var(--menu-icon-size) * -1);
@@ -562,6 +558,7 @@ button:focus {
   left: 0;
   overflow: hidden;
   height: 100%;
+  mix-blend-mode: normal;
 }
 
 .figure__caption__link {
@@ -572,6 +569,7 @@ button:focus {
   padding: .75rem 1rem 1rem;
   margin: 0;
   text-align: center;
+  z-index: 1;
 }
 
 .figure--video {
@@ -689,7 +687,7 @@ button:focus {
 .play-button::after {
   content: "";
   border: .5em solid transparent;
-  border-left: .75em solid black;
+  border-left: .75em solid var(--color-dark);
   width: 0;
   height: 0;
   left: 65%;
@@ -701,21 +699,21 @@ button:focus {
 }
 
 .invert .play-button::after {
-  border-left: .75em solid white;
+  border-left: .75em solid var(--color-light);
 }
 
 .play-button--pause::after {
   border: 0 solid transparent;
-  border-left: .25em solid black;
-  border-right: .25em solid black;
+  border-left: .25em solid var(--color-dark);
+  border-right: .25em solid var(--color-dark);
   width: 8%;
   height: 40%;
   left: 50%;
 }
 
 .invert .play-button--pause::after {
-  border-left: .25em solid white;
-  border-right: .25em solid white;
+  border-left: .25em solid var(--color-light);
+  border-right: .25em solid var(--color-light);
 }
 
 @keyframes biophoto {
@@ -749,14 +747,20 @@ button:focus {
 Steve Chab Band
 ======================== */
 
-.steve-chab-band-logo-stacked { width: 100%; }
+.steve-chab-band-logo-stacked {
+  width: 100%;
+  fill: var(--color-dark);
+}
 
 @media (max-width: 767px) {
-  .steve-chab-band-logo-stacked { padding: 0 25%; }
+  .steve-chab-band-logo-stacked {
+    padding: 0 25%;
+  }
 }
 
 .steve-chab-band-logo-bug {
   width: var(--icon-height);
+  fill: var(--color-dark);
 }
 
 
@@ -777,7 +781,7 @@ Print Special Message
     line-height: .9em;
     text-transform: uppercase;
     display: block;
-    white-space: pre;
+    var(--color-light)-space: pre;
     text-align: center;
     margin-top: 1em;
   }

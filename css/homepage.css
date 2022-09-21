@@ -3,7 +3,7 @@ Homepage
 ========================== */
 
 .main {
-  background-color: white;
+  background-color: var(--color-light);
   transition: background-color ease calc(var(--animation-speed-slow));
   overflow: hidden;
   position: absolute;
@@ -72,12 +72,12 @@ Homepage
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke: #000;
+  stroke: var(--color-dark);
   stroke-width: 0.5px;
 }
 
 .wordmark-container__wordmark .fill {
-  fill: #000;
+  fill: var(--color-dark);
 }
 
 .audio-player {
@@ -101,7 +101,7 @@ Homepage
 }
 
 .audio-player__track-title {
-  background-color: #fff;
+  background-color: var(--color-light);
   position: relative;
   opacity: 0;
 }

@@ -9,9 +9,8 @@ img {
 }
 
     
-b,
-i {
-    font-weight: normal;
+b, i {
+    font-weight: bold;
     font-style: normal;
     transition:opacity 0.1s ease;
 }
@@ -44,7 +43,7 @@ label {
 
 #art {
     position: relative;
-    background-color: #000;
+    background-color: var(--color-light);
     margin: 0 auto;
     max-width: 100%;
     height: 100%;
@@ -58,6 +57,7 @@ label {
     z-index: 1;
     top: 45%;
     transform: translateY(-50%) rotate(0deg);
+    outline: 50vh black solid;
 }
 
 img[alt='sun'] {opacity: .5;}
@@ -110,7 +110,7 @@ section {
 
 #tracks a:hover,
 #tracks a:focus {
-  background-color: black;
+  background-color: var(--color-dark);
 }
 
 #tracks a:not(.active):not(:hover):not(:focus) {opacity: .5}
