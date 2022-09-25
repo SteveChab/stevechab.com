@@ -781,7 +781,7 @@ Print Special Message
     line-height: .9em;
     text-transform: uppercase;
     display: block;
-    var(--color-light)-space: pre;
+    white-space: pre;
     text-align: center;
     margin-top: 1em;
   }
