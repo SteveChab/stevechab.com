@@ -166,11 +166,7 @@ li {
   margin: 1em 0;
 }
 
-img,
-iframe {
-  max-width: 100%;
-  mix-blend-mode: luminosity;
-}
+img, iframe {max-width: 100%}
 
 a,
 button {
