@@ -176,11 +176,11 @@ textarea {
 Custom Styles
 ===================== */
 :root {
-  --color1: yellowgreen;
-  --color2: chartreuse;
+  --color1: indianred;
+  --color2: steelblue;
   --color3: olive;
   --color-dark: #440; /* invert: #bbf */
-  --color-light: #f98; /* invert: #067 */
+  --color-light: #fff; /* invert: #000 */
   --color-gray-light: rgba(0, 0, 0, .1);
 
   --icon-height: 65px;
