@@ -5,8 +5,8 @@ Custom Styles
   --color1: indianred;
   --color2: steelblue;
   --color3: olive;
-  --color-dark: #440; /* invert: #bbf */
-  --color-light: #fff; /* invert: #000 */
+  --color-dark: #000;
+  --color-light: #fff;
   --color-gray-light: rgba(0, 0, 0, .1);
 
   --icon-height: 65px;
