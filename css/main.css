@@ -35,7 +35,7 @@ html {
   font-family: var(--font-stack);
   font-weight: 300;
   font-size: 1.15rem;
-  line-height: 1.65em;
+  line-height: 1.75em;
 }
 
 /* reduce font size for tablet and lower */
@@ -158,8 +158,8 @@ h2 {
 }
 
 ul, ol, p {
-  line-height: 1.65em;
-  margin: 1.65em 0;
+  line-height: 1.75em;
+  margin: 1.75em 0;
 }
 
 li {
