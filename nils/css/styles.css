@@ -43,7 +43,7 @@ label {
 
 #art {
     position: relative;
-    background-color: var(--color-light);
+    background-color: black;
     margin: 0 auto;
     max-width: 100%;
     height: 100%;

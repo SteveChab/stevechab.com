@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>LarvaScript - Steve Chab</title>
+  <title>LarvaScript: trippy, glitchy, nauseating, abstract art animations - Steve Chab</title>
   <meta name="description" content="Trippy, glitchy, nauseating, computer art animations">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -46,7 +46,6 @@
         transform: rotate(45deg) scale(2);
         position: absolute;
         z-index: 0;
-        mix-blend-mode: luminosity;
     }
 
     /* JS setInterval is better on CPU than CSS keyframes (see "setInterval" in JS below) */
@@ -56,7 +55,7 @@
     } */
 
     .art {
-        background: url(images/bg-moving-black.gif);
+        background: url(https://live.staticflickr.com/65535/54138947577_1384540199_b.jpg);
         background-repeat: repeat;
         background-position-x: 0;
         background-position-y: center;
@@ -99,6 +98,20 @@
       z-index: 100;
     }
 
+    .url-input {
+      position: absolute;
+      background: white;
+      padding: 1rem;
+      bottom: 1rem;
+      left: calc(var(--icon-height) + var(--container-padding));
+      border: none;
+      height: var(--icon-height);
+      width: 50vw;
+      z-index: 5;
+      font-family: var(--font-stack);
+      font-size: 1rem;
+    }
+
     .control-container {
         position: absolute;
         bottom: 1rem;
@@ -139,7 +152,6 @@
 </head>
 
 <body class="page-container no-js">
-  <header class="header">
     <a class="header__link-home" href="/">
       <span class="sr-only">Steve Chab Homepage</span>
       <svg aria-hidden="true" class="header__link-home__wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 337.3 49.9">
@@ -166,12 +178,8 @@
         </g>
       </svg>
     </a>
-    <a class="header__link-menu icon" href="/menu/">
-      <span class="sr-only">Menu</span>
-    </a>
-  </header>
     <main class="art-container" aria-hidden="true">
-        <h1 class="sr-only">Steve Chab's LarvaScript: trippy, glitchy, nauseating, computer art animations</h1>
+        <h1 class="sr-only">LarvaScript: trippy, glitchy, nauseating, abstract art animations</h1>
         <div class="art art--1"></div>
         <div class="art art--2"></div>
         <div class="art art--3"></div>
@@ -180,6 +188,7 @@
     <button class="icon action-button" aria-pressed="false">
       <span class="sr-only">Induce Seizures</span>
     </button>
+    <input class="url-input" type="url" value="" placeholder="Try your own image URL" aria-label="Try your own image URL">
     <div class="control-container">
         <button class="icon control" aria-pressed="true" data-art="images/bg.gif">Crosshatch Filter</button>
         <button class="icon control" aria-pressed="false" data-art="images/bg-moving-black.gif">Crawling Diagonals</button>
@@ -227,27 +236,16 @@
         });
     });
 
-    var getJSON = $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=CBa8KMnHoScQ_jTwRegbvR4K4hq8Coy4I5O9o3n5jrPVPLYkC9VXXkHywaXIr3W0IfUzSXtzPyaDvkCyE4N_AjE6eyo4RneMm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnAXcxya3zxAyVE6wUH9gJG8HDv8QX-1cYK9GC_rZ4sYRDVtqcmQC9OGCTwxE3DlvDhpUTFujkBSlc40cOE7rkMr-0zvEDtu0Iw&lib=MEnjPjs7QRK1vYCqCunZeHN8xCLqJE_8p"),
-        sheetJSON;
-
-    function processJSON(){
-        var subhead = sheetJSON[0].title,
-            artwork1 = 'background-image:url(' + sheetJSON[0].art1 + ')',
-            artwork2 = 'background-image:url(' + sheetJSON[0].art2 + ')',
-            artwork3 = 'background-image:url(' + sheetJSON[0].art3 + ')',
-            artwork4 = 'background-image:url(' + sheetJSON[0].art4 + ')';
-        
-        console.log(artwork1);
-        
-        $('.art--1').attr('style', artwork1);
-        $('.art--2').attr('style', artwork2);
-        $('.art--3').attr('style', artwork3);
-        $('.art--4').attr('style', artwork4);
+    function listenForNewImg(){
+      $('.url-input').on('input', function(){
+        if (!this.value) {
+          $('.art').removeAttr('style');
+        } else {
+          $('.art').attr('style', 'background-image:url(' + this.value + ')');
+        }
+      })
     }
 
-    getJSON.done(function () {
-        sheetJSON = getJSON.responseJSON;
-        processJSON();
-    });
+    listenForNewImg();
     </script>
 </body>

@@ -22,7 +22,6 @@
 </head>
 
 <body>
-  <header class="header">
     <a class="header__link-home" href="/">
       <span class="sr-only">Steve Chab Homepage</span>
       <svg aria-hidden="true" class="header__link-home__wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 337.3 49.9">
@@ -49,10 +48,6 @@
         </g>
       </svg>
     </a>
-    <a class="header__link-menu icon" href="/menu/">
-      <span class="sr-only">Menu</span>
-    </a>
-  </header>
   <main class="main main--atextual">
     <noscript>Please enable JavaScript or reload the page.</noscript>
     <dl class="definition-list" hidden aria-live="polite">
@@ -69,34 +64,1119 @@
   </main>
   <script>document.querySelector(".no-js").classList.remove("no-js");</script>
   <script>
-    var sheet = "https://script.googleusercontent.com/macros/echo?user_content_key=UHqjfvraFuQ5ISYLPh2QCyP6FHUW4cj-9DFM3_aJqX9r91BKiz5vE4RjaniGLExVf3hdGqYgSboPWPQUTlu4vlae3Dv1EmMpm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnNzlJ22YVv6uoZN9PssUDmqCBauBb_CWFaiPnrDIBwH9IIL9zL982gzyMw4zSLbCZUsKiRG9RlvhNMOW5EudYCE1E1z0lhqr9dz9Jw9Md8uu&lib=Mryg7BUxkOGMwU21_Zg-l6GqzSmbeoLAb";
-    var atextual = "STEVEEEE!!!!";
+    const json = [
+      {
+        "term": "additional brain invite",
+        "definition": "two heads are better than one"
+      },
+      {
+        "term": "alumini",
+        "definition": "aluminum alumni"
+      },
+      {
+        "term": "anaphoraphobia",
+        "definition": "anaphoraphobia"
+      },
+      {
+        "term": "brain list",
+        "definition": "behavioral economics party"
+      },
+      {
+        "term": "brain panel",
+        "definition": "lobotomic accessory"
+      },
+      {
+        "term": "brain trust",
+        "definition": "lobotomic savings account"
+      },
+      {
+        "term": "Cascade's Palette",
+        "definition": "the treatment of the new confetti sounds uncertain"
+      },
+      {
+        "term": "crap and gown",
+        "definition": "nervous scholar"
+      },
+      {
+        "term": "fellowship ticker",
+        "definition": "rate of scholars"
+      },
+      {
+        "term": "global tweaks",
+        "definition": "mini revolts or adjustments"
+      },
+      {
+        "term": "internalish",
+        "definition": "sort of inside"
+      },
+      {
+        "term": "modern language meatball",
+        "definition": "departmental logo"
+      },
+      {
+        "term": "self-inflicted hiatus",
+        "definition": "accidental vacation"
+      },
+      {
+        "term": "semiquincentennial",
+        "definition": "a celebration of prefixes"
+      },
+      {
+        "term": "superterse",
+        "definition": "punctual punctuation"
+      },
+      {
+        "term": "tartan haze",
+        "definition": "psychedelic bagpipes"
+      },
+      {
+        "term": "unheralded librarians",
+        "definition": "accidentally organized not Herald"
+      },
+      {
+        "term": "universalizable",
+        "definition": "anarchist scholars"
+      },
+      {
+        "term": "vulgarisms",
+        "definition": "new modern language collection"
+      },
+      {
+        "term": "comic sans revival",
+        "definition": "evangelical email signature"
+      },
+      {
+        "term": "crooked y project",
+        "definition": "make the logo bigger"
+      },
+      {
+        "term": "faux crispness",
+        "definition": "afraid to make visible again"
+      },
+      {
+        "term": "fluorescence olive",
+        "definition": "the other name for chartreuse"
+      },
+      {
+        "term": "genericide",
+        "definition": "pathetic aesthetics"
+      },
+      {
+        "term": "isolated business people",
+        "definition": "take off your clipping mask"
+      },
+      {
+        "term": "LarvaScript",
+        "definition": "Steve Chab dot calm"
+      },
+      {
+        "term": "layer 0",
+        "definition": "transparent background check"
+      },
+      {
+        "term": "lazy triangle",
+        "definition": "melting percussionist"
+      },
+      {
+        "term": "light black",
+        "definition": "dark white"
+      },
+      {
+        "term": "necrocolors",
+        "definition": "goth Pantone swatches"
+      },
+      {
+        "term": "neutral brand interaction",
+        "definition": "make the logo bigger"
+      },
+      {
+        "term": "pixels per finger",
+        "definition": "cubits for computing"
+      },
+      {
+        "term": "subtle obsession with specificity",
+        "definition": "essentially quirky images"
+      },
+      {
+        "term": "subtly brutalist",
+        "definition": "slight vanity constraints"
+      },
+      {
+        "term": "ultra lava",
+        "definition": "fluorescent salmon"
+      },
+      {
+        "term": "vague colors",
+        "definition": "grayscale gayscale"
+      },
+      {
+        "term": "vertically centered",
+        "definition": "symmetrically planked"
+      },
+      {
+        "term": "wrong theory",
+        "definition": "ruin your creations"
+      },
+      {
+        "term": "bat shortage",
+        "definition": "splurge for chiroptera"
+      },
+      {
+        "term": "chocolate rifles",
+        "definition": "when it's okay to put a gun in your mouth"
+      },
+      {
+        "term": "chromatoast",
+        "definition": "chromatic croutons"
+      },
+      {
+        "term": "crock potty mouth",
+        "definition": "vulgar food innuendos"
+      },
+      {
+        "term": "cucumbersome",
+        "definition": "giant cucumber"
+      },
+      {
+        "term": "elvis pretzely",
+        "definition": "snacks with pompadours"
+      },
+      {
+        "term": "experimental orchard",
+        "definition": "polyrhythmic cocktail"
+      },
+      {
+        "term": "farmy",
+        "definition": "agricultural manner"
+      },
+      {
+        "term": "hogs & kisses",
+        "definition": "bacon addiction"
+      },
+      {
+        "term": "holy curds",
+        "definition": "pure, actualized cheese"
+      },
+      {
+        "term": "honeycreeper",
+        "definition": "horrible molasses surplus"
+      },
+      {
+        "term": "Institute for Maple Syrup",
+        "definition": "6 degrees of Canadian bacon"
+      },
+      {
+        "term": "lean hogs",
+        "definition": "jumbo shrimp"
+      },
+      {
+        "term": "major sours",
+        "definition": "authoritartive"
+      },
+      {
+        "term": "matte spinach finish",
+        "definition": "milk-dusted veggies"
+      },
+      {
+        "term": "poisonous edibles",
+        "definition": "noxious noshing"
+      },
+      {
+        "term": "regal drooler",
+        "definition": "pit bull waiting for table scraps"
+      },
+      {
+        "term": "salmon haggis",
+        "definition": "fish gut delicacy"
+      },
+      {
+        "term": "secular cheesecake",
+        "definition": "use Swiss to sanctify"
+      },
+      {
+        "term": "sky busting",
+        "definition": "that goose is too far away"
+      },
+      {
+        "term": "smart chunks",
+        "definition": "genius barf"
+      },
+      {
+        "term": "spooky banana font",
+        "definition": "nature's invisible ink"
+      },
+      {
+        "term": "tunnel cake",
+        "definition": "birthday rat"
+      },
+      {
+        "term": "bony laugh",
+        "definition": "skeletal snicker"
+      },
+      {
+        "term": "boxed parrot",
+        "definition": "mail-order taxidermy"
+      },
+      {
+        "term": "brief fright",
+        "definition": "from zero to fearful, quickly"
+      },
+      {
+        "term": "carbonated blood",
+        "definition": "sparkling morbidity"
+      },
+      {
+        "term": "cartoon rainbow of blood",
+        "definition": "anything fake"
+      },
+      {
+        "term": "cartoon roboticist",
+        "definition": "mad imaginary villain"
+      },
+      {
+        "term": "choice test subjects",
+        "definition": "delicious specimens"
+      },
+      {
+        "term": "deathinition",
+        "definition": "morbid dictionary entry"
+      },
+      {
+        "term": "deathoscope",
+        "definition": "Hubble's rubble laser"
+      },
+      {
+        "term": "deathscort",
+        "definition": "from womb to tomb"
+      },
+      {
+        "term": "destructivity",
+        "definition": "scab picker"
+      },
+      {
+        "term": "duct tape worm",
+        "definition": "patched by parasites"
+      },
+      {
+        "term": "epic smear job",
+        "definition": "ample smearing"
+      },
+      {
+        "term": "identity nightmare",
+        "definition": "being insecure to the point of terror"
+      },
+      {
+        "term": "meh lab",
+        "definition": "illegally harnessed boredom"
+      },
+      {
+        "term": "metallic space cougar",
+        "definition": "mom's intergalactic cockpit"
+      },
+      {
+        "term": "revengine",
+        "definition": "revenge engine"
+      },
+      {
+        "term": "secretly relieved",
+        "definition": "cloaked catheter"
+      },
+      {
+        "term": "skull farmer",
+        "definition": "digging up remains"
+      },
+      {
+        "term": "turning janitrix",
+        "definition": "female custodial hooker"
+      },
+      {
+        "term": "victims of overchoice",
+        "definition": "ruined by ampleness"
+      },
+      {
+        "term": "working flies",
+        "definition": "insects on a mission"
+      },
+      {
+        "term": "algorhythms",
+        "definition": ""
+      },
+      {
+        "term": "ambient banger",
+        "definition": "sounds of nodding heads"
+      },
+      {
+        "term": "audiosalve",
+        "definition": "acoustic lotion"
+      },
+      {
+        "term": "basement feels",
+        "definition": "emo house shows"
+      },
+      {
+        "term": "bit banger",
+        "definition": "chiptune trap"
+      },
+      {
+        "term": "dismal niche",
+        "definition": "stuck in a sub-genre"
+      },
+      {
+        "term": "Dr. Pancake and the Electric Stoves",
+        "definition": "deathcore breeding ground for roller skaters"
+      },
+      {
+        "term": "guttural approval",
+        "definition": "vocalist who prefers brie"
+      },
+      {
+        "term": "heckno",
+        "definition": "evangelical EDM compilation"
+      },
+      {
+        "term": "hefty leek",
+        "definition": "Heavy Vegetable cover band"
+      },
+      {
+        "term": "meth grips",
+        "definition": "secular hip-hop addiction"
+      },
+      {
+        "term": "music of the gaps",
+        "definition": "personalized, algorithmic curation"
+      },
+      {
+        "term": "smooth gabber",
+        "definition": "jumbo shrimp juking it out"
+      },
+      {
+        "term": "tonal annihilation",
+        "definition": "chords of death"
+      },
+      {
+        "term": "Africadabra",
+        "definition": "black magic"
+      },
+      {
+        "term": "anti-entertainment",
+        "definition": "haters of fun"
+      },
+      {
+        "term": "assault raffle",
+        "definition": "buy every 50/50 ticket"
+      },
+      {
+        "term": "battery pits",
+        "definition": "the uneatable part of a battery"
+      },
+      {
+        "term": "bitter & blind critic barking",
+        "definition": "opportunities for stress and fear"
+      },
+      {
+        "term": "boar meats world",
+        "definition": "pigs in puberty"
+      },
+      {
+        "term": "bungsnot",
+        "definition": "you're a booger stopper"
+      },
+      {
+        "term": "coal rainbow",
+        "definition": "gay chemical spill"
+      },
+      {
+        "term": "cocher spanyard",
+        "definition": "breed-specific legislation"
+      },
+      {
+        "term": "cocoa butler",
+        "definition": "salve for servants"
+      },
+      {
+        "term": "complicated hoard progression",
+        "definition": "organized beyond recognition"
+      },
+      {
+        "term": "crunchy mommy porn",
+        "definition": "50 shades of organic whey"
+      },
+      {
+        "term": "David Blame",
+        "definition": "reciprocal circus acts"
+      },
+      {
+        "term": "dismantling batteries",
+        "definition": "wear gloves"
+      },
+      {
+        "term": "fluxtravagant",
+        "definition": "extreme flux"
+      },
+      {
+        "term": "future clips",
+        "definition": "feminist haircut critique"
+      },
+      {
+        "term": "glass lightning rod",
+        "definition": "anything fragile, fast"
+      },
+      {
+        "term": "goat dents",
+        "definition": "don't park in a petting zoo"
+      },
+      {
+        "term": "golden marches",
+        "definition": "fast food identity politics"
+      },
+      {
+        "term": "homotextual",
+        "definition": "transgender trendsetter"
+      },
+      {
+        "term": "imaginating",
+        "definition": "examinating imagined images"
+      },
+      {
+        "term": "irregular replies",
+        "definition": "suspicion confirmed"
+      },
+      {
+        "term": "knitted uterus",
+        "definition": "womb simulator"
+      },
+      {
+        "term": "laxatative",
+        "definition": "continuous laxatives"
+      },
+      {
+        "term": "merry chrispness",
+        "definition": "tis the season for focus"
+      },
+      {
+        "term": "midnightish",
+        "definition": "about midnight"
+      },
+      {
+        "term": "mobile composting",
+        "definition": "throwing apple cores from a vehicle"
+      },
+      {
+        "term": "mooty blues",
+        "definition": "big, sad"
+      },
+      {
+        "term": "newborn vipers",
+        "definition": "bitin' worms"
+      },
+      {
+        "term": "paradoxical oxymoron",
+        "definition": "illogically unacceptable"
+      },
+      {
+        "term": "party residue",
+        "definition": "wear shoes"
+      },
+      {
+        "term": "Polish phonetic spelling",
+        "definition": "shinola"
+      },
+      {
+        "term": "Prita",
+        "definition": "calico at legal drinking age"
+      },
+      {
+        "term": "probablems",
+        "definition": "probable problem"
+      },
+      {
+        "term": "probelly",
+        "definition": "probably spelled wrong"
+      },
+      {
+        "term": "purgative purgatively",
+        "definition": "proper obliteration"
+      },
+      {
+        "term": "rainbow drool",
+        "definition": "that spit is gay"
+      },
+      {
+        "term": "raving excel lunatic",
+        "definition": "techno for admins"
+      },
+      {
+        "term": "scuba driver",
+        "definition": "scuber"
+      },
+      {
+        "term": "shark value",
+        "definition": "the recordings of natural predators"
+      },
+      {
+        "term": "shooter downer",
+        "definition": "phase never"
+      },
+      {
+        "term": "silent consonants",
+        "definition": "pshhhh"
+      },
+      {
+        "term": "silver streakers",
+        "definition": "nudist gym for seniors"
+      },
+      {
+        "term": "slow danger",
+        "definition": "sloth with rabies"
+      },
+      {
+        "term": "suddenlies",
+        "definition": "almost now"
+      },
+      {
+        "term": "super face glue",
+        "definition": "sticky smirk"
+      },
+      {
+        "term": "super obliterated",
+        "definition": "nukes and crannies"
+      },
+      {
+        "term": "tin foliage",
+        "definition": "preserved while falling"
+      },
+      {
+        "term": "tornadic tendencies",
+        "definition": "spheroid addiction"
+      },
+      {
+        "term": "transparents",
+        "definition": "momdudes"
+      },
+      {
+        "term": "trapezoidish",
+        "definition": "not spheroidal"
+      },
+      {
+        "term": "velocichiropractor",
+        "definition": "Jurassic adjustments"
+      },
+      {
+        "term": "we'ren't",
+        "definition": "we were not a contraction"
+      },
+      {
+        "term": "woahzards",
+        "definition": "unnaturally forward wizards"
+      },
+      {
+        "term": "woezards",
+        "definition": "sorely sorrowful wizards"
+      },
+      {
+        "term": "zombie aids",
+        "definition": "also kills vampires"
+      },
+      {
+        "term": "1000+ rebuttals",
+        "definition": "a different type of overwhelming"
+      },
+      {
+        "term": "abba lens",
+        "definition": "godly perspective"
+      },
+      {
+        "term": "artificial irreverence",
+        "definition": "atheism"
+      },
+      {
+        "term": "atextual",
+        "definition": "hermeneutics troll"
+      },
+      {
+        "term": "atomic blessing",
+        "definition": "elaborate groanings of the Holy Spirit"
+      },
+      {
+        "term": "black power naps",
+        "definition": "ankh won't save you"
+      },
+      {
+        "term": "californification",
+        "definition": "state of sin"
+      },
+      {
+        "term": "chiefs of thousands",
+        "definition": "OG middle managers"
+      },
+      {
+        "term": "cult therapy",
+        "definition": "new ways of feeling ways of feeling new"
+      },
+      {
+        "term": "dead luxury",
+        "definition": "you can't take it with you"
+      },
+      {
+        "term": "defy science",
+        "definition": "or deify science"
+      },
+      {
+        "term": "exegetical imprecision",
+        "definition": "the mother of liberal theology"
+      },
+      {
+        "term": "folklorization",
+        "definition": "religion as commodity"
+      },
+      {
+        "term": "gnarly menorah",
+        "definition": "psychedelic klezmer"
+      },
+      {
+        "term": "hefty leek",
+        "definition": "Passover seder whip"
+      },
+      {
+        "term": "illusions of progress",
+        "definition": "faith in man"
+      },
+      {
+        "term": "impastor",
+        "definition": "not real clergy"
+      },
+      {
+        "term": "improverbs",
+        "definition": "liberal theology"
+      },
+      {
+        "term": "kingdomize",
+        "definition": "Jesus as King"
+      },
+      {
+        "term": "logical jesus",
+        "definition": "full, working conversion"
+      },
+      {
+        "term": "Lukewarmness",
+        "definition": "fuzzy Gospel feeling"
+      },
+      {
+        "term": "Mennonite mosh pit",
+        "definition": "strange fire"
+      },
+      {
+        "term": "moderately immortal",
+        "definition": "kinda living forever"
+      },
+      {
+        "term": "neurotheology",
+        "definition": "sheep resonance imaging"
+      },
+      {
+        "term": "newt covenant",
+        "definition": "reptiligion"
+      },
+      {
+        "term": "nun stop",
+        "definition": "convenience store for clergy"
+      },
+      {
+        "term": "ontological tests",
+        "definition": "large multinational qualitative study"
+      },
+      {
+        "term": "ordainary",
+        "definition": "ordinary ordination"
+      },
+      {
+        "term": "pastorized",
+        "definition": "Renewed Covenant Fidelity"
+      },
+      {
+        "term": "paypalcy",
+        "definition": "Vaticanal PayPal account"
+      },
+      {
+        "term": "plagued by pink",
+        "definition": "pink eye on Pesach"
+      },
+      {
+        "term": "pow'r",
+        "definition": "power but shorter"
+      },
+      {
+        "term": "prophetic ecstasy",
+        "definition": "Franciscan frenzy"
+      },
+      {
+        "term": "repent of whatever",
+        "definition": "consecrate that thing"
+      },
+      {
+        "term": "resurrexual",
+        "definition": "Jesus is my husband"
+      },
+      {
+        "term": "reverse jinx",
+        "definition": "blessing in disguise"
+      },
+      {
+        "term": "sheep imaging",
+        "definition": "the Good Shepherd knows your thoughts"
+      },
+      {
+        "term": "singlasses",
+        "definition": "dark worldview"
+      },
+      {
+        "term": "singular female sufformative",
+        "definition": "perfect Jewish wife"
+      },
+      {
+        "term": "supernatural soliciting",
+        "definition": "sympathetic church shopping"
+      },
+      {
+        "term": "swatchtower",
+        "definition": "Latter Day Paints"
+      },
+      {
+        "term": "swine shepherd",
+        "definition": "Satan himself"
+      },
+      {
+        "term": "terminal generation",
+        "definition": "repent: the end is near"
+      },
+      {
+        "term": "TERUACH",
+        "definition": "Spirit-filled shofar factory"
+      },
+      {
+        "term": "volitional nuance",
+        "definition": "subtly willing power"
+      },
+      {
+        "term": "acoustic tweezers",
+        "definition": "my favorite appliance"
+      },
+      {
+        "term": "behavioral nudges",
+        "definition": "mini manipulations"
+      },
+      {
+        "term": "cosmic eraser",
+        "definition": "the object of worship for Stephen Hawkings"
+      },
+      {
+        "term": "cosmic parent",
+        "definition": "the object of worship for Stephen Hawkings"
+      },
+      {
+        "term": "genetic dullness",
+        "definition": "you look boring"
+      },
+      {
+        "term": "humanized rat model",
+        "definition": "Hell to Pitt"
+      },
+      {
+        "term": "infantitive",
+        "definition": "and scream they do"
+      },
+      {
+        "term": "moon in a bag",
+        "definition": "win at science"
+      },
+      {
+        "term": "neurotured",
+        "definition": "healthy neurological diet"
+      },
+      {
+        "term": "pigs in a mylar blanket",
+        "definition": "men wrapped in a space suit"
+      },
+      {
+        "term": "robosapien",
+        "definition": "more human than human"
+      },
+      {
+        "term": "sirs vaccine",
+        "definition": "formality guard"
+      },
+      {
+        "term": "solve this puzzle to prove your humanity",
+        "definition": "science"
+      },
+      {
+        "term": "subliminal neo-nazism",
+        "definition": "scielence"
+      },
+      {
+        "term": "teeth to gum ratio",
+        "definition": "smile, and forget about the surgery"
+      },
+      {
+        "term": "umptillionth",
+        "definition": "billions and billions"
+      },
+      {
+        "term": "!!''",
+        "definition": "Pronounced False"
+      },
+      {
+        "term": "1000 categories",
+        "definition": "field of checkboxes"
+      },
+      {
+        "term": "accordions reduce visibility",
+        "definition": "polka bands on a foggy night"
+      },
+      {
+        "term": "anonymized snippets",
+        "definition": "byte marks"
+      },
+      {
+        "term": "app-athy",
+        "definition": "big brother is watching you laugh out loud"
+      },
+      {
+        "term": "authentication outage",
+        "definition": "get off my lawn"
+      },
+      {
+        "term": "backticking",
+        "definition": "`this is not a quote`"
+      },
+      {
+        "term": "bad request",
+        "definition": "400 reasons to say no"
+      },
+      {
+        "term": "blurbing",
+        "definition": "summary snippets"
+      },
+      {
+        "term": "bulletize",
+        "definition": "make everything a list"
+      },
+      {
+        "term": "case insensitivity",
+        "definition": "shift your senses"
+      },
+      {
+        "term": "categorization theory",
+        "definition": "humans aren't strictly rational"
+      },
+      {
+        "term": "cipients",
+        "definition": "re: re: re: (no subject)"
+      },
+      {
+        "term": "code-blooded",
+        "definition": "outstanding implementations"
+      },
+      {
+        "term": "core clobberer",
+        "definition": "delete all the apples"
+      },
+      {
+        "term": "corrupt attachments",
+        "definition": "inverted icons"
+      },
+      {
+        "term": "custom validity",
+        "definition": "sourcing self"
+      },
+      {
+        "term": "data deaf",
+        "definition": "flush privileges"
+      },
+      {
+        "term": "domain gnomes",
+        "definition": "trolls that hoard your names dot com"
+      },
+      {
+        "term": "ehoarding",
+        "definition": "delete nothing"
+      },
+      {
+        "term": "epic sub-task",
+        "definition": "nested tedium"
+      },
+      {
+        "term": "escape tool",
+        "definition": "ejectable media"
+      },
+      {
+        "term": "feral ampersand",
+        "definition": "extended retro"
+      },
+      {
+        "term": "firehosey",
+        "definition": "exquisite and fine whining"
+      },
+      {
+        "term": "firewall punching",
+        "definition": "property of cluster services"
+      },
+      {
+        "term": "fuzzy matching",
+        "definition": "bigfoot is blurry"
+      },
+      {
+        "term": "happiness bucket",
+        "definition": "vats of overflowing data"
+      },
+      {
+        "term": "infoglut",
+        "definition": "too much information to assimilate"
+      },
+      {
+        "term": "information scent",
+        "definition": "resolving secrets"
+      },
+      {
+        "term": "internet hate crimes",
+        "definition": "straw men talking ship"
+      },
+      {
+        "term": "lurker",
+        "definition": "persuasive digital experiences"
+      },
+      {
+        "term": "machine olfaction",
+        "definition": "“Alexa, do I need a bath?”"
+      },
+      {
+        "term": "mixed reality",
+        "definition": "digital certainty index"
+      },
+      {
+        "term": "murky privacy waters",
+        "definition": "piece of the puddle"
+      },
+      {
+        "term": "new orphan report",
+        "definition": "starving African baby calendar"
+      },
+      {
+        "term": "no good skin tone",
+        "definition": "racist emoji"
+      },
+      {
+        "term": "online grooming tactics",
+        "definition": "check yourself before you selfie stick yourself"
+      },
+      {
+        "term": "operational potpourri",
+        "definition": "not currently surfaced"
+      },
+      {
+        "term": "other bucket",
+        "definition": "dirty data live here"
+      },
+      {
+        "term": "permission wizard",
+        "definition": "test tube genie"
+      },
+      {
+        "term": "positive falses",
+        "definition": "def not"
+      },
+      {
+        "term": "pretty errors",
+        "definition": "clunk city"
+      },
+      {
+        "term": "python scraper",
+        "definition": "wear gloves"
+      },
+      {
+        "term": "re-cursed recursion",
+        "definition": "spheroidal"
+      },
+      {
+        "term": "rich operator",
+        "definition": "sort by top hated"
+      },
+      {
+        "term": "robosexual",
+        "definition": "hard-on technology"
+      },
+      {
+        "term": "scrubbing routine",
+        "definition": "clean data are happy data"
+      },
+      {
+        "term": "sealed sub-community boat",
+        "definition": "private internet cruise"
+      },
+      {
+        "term": "search engine physics",
+        "definition": "gravity, public relations"
+      },
+      {
+        "term": "sin is just malware",
+        "definition": "trojan cockroach celebrated"
+      },
+      {
+        "term": "strange characters",
+        "definition": "text sanitization"
+      },
+      {
+        "term": "three column collapse",
+        "definition": "colonnaded accordionists"
+      },
+      {
+        "term": "touch collection",
+        "definition": "swipe and pinch doom"
+      },
+      {
+        "term": "traversing eternity",
+        "definition": "oh-my-God machine"
+      },
+      {
+        "term": "trivial polyfill",
+        "definition": "useless degraded grace"
+      },
+      {
+        "term": "ubiquitous computing",
+        "definition": "this"
+      },
+      {
+        "term": "unaugmented",
+        "definition": "your mind is out of context"
+      },
+      {
+        "term": "unnaturally forward",
+        "definition": "digital etiquette blunder"
+      },
+      {
+        "term": "utility fog",
+        "definition": "blankly staring at 1000 yogurts"
+      },
+      {
+        "term": "wizard flow",
+        "definition": "black magic emcees"
+      }
+    ];
 
     function generateDefinition() {
-      var totalRows = atextual.length;
+      var totalRows = json.length;
       var randomEntry = Math.floor((Math.random() * totalRows) + 0);
-      var term = atextual[randomEntry].term;
-      var definition = atextual[randomEntry].definition;
+      var term = json[randomEntry].term;
+      var definition = json[randomEntry].definition;
 
-      if (!term || !definition) {
-        generateDefinition();
-      } else {
-        document.querySelector(".definition-list__term").innerHTML = term;
-        document.querySelector(".definition-list__definition").innerHTML = definition;
-        document.querySelector(".decorative-terms__term").innerHTML = term;
-        document.querySelector(".decorative-terms").removeAttribute("hidden");
-        document.querySelector(".definition-list").removeAttribute("hidden");
-      }
+      document.querySelector(".definition-list__term").innerHTML = term;
+      document.querySelector(".definition-list__definition").innerHTML = definition;
+      document.querySelector(".decorative-terms__term").innerHTML = term;
+      document.querySelector(".decorative-terms").removeAttribute("hidden");
+      document.querySelector(".definition-list").removeAttribute("hidden");
     }
 
-    fetch(sheet, { 
-      method: 'GET'
-    })
-    .then(function(response) { return response.json(); })
-    .then(function(json) {
-      atextual = json;
-      generateDefinition();
-    });
+    generateDefinition();
 
     document.querySelector(".action-button").onclick = function() {
       generateDefinition();
