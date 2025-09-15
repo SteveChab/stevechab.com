@@ -239,7 +239,7 @@ button:focus {
   padding-right: .65rem;
   z-index: 10000;
   left: 1rem;
-  position: absolute;
+  position: fixed;
   top: 1rem;
 }
 
