@@ -237,6 +237,10 @@ button:focus {
   width: calc(var(--icon-height) * 4);
   padding: .5rem;
   padding-right: .65rem;
+  z-index: 10000;
+  left: 1rem;
+  position: absolute;
+  top: 1rem;
 }
 
 @media (max-width: 767px) {
